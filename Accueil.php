@@ -106,8 +106,8 @@
                 <p style="font-family: quicksand; font-size: 70px; color: white; font-weight: bold;">Trouver l'amour dès maintenant !</p>
             </div>
             <div class="buttons-container">
-                <button href="#" class="bouton">Créer un compte</button>
-                <button href="#" class="bouton">Se connecter</button>
+                <a href="./Register.php" class="bouton">Créer un compte</a>
+                <a href="#" class="bouton">Se connecter</a>
             </div>
         </div>
     </body>
