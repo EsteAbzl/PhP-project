@@ -6,12 +6,14 @@
     </head>
     
     <body>
-        <div style="height: 200px;"></div>
-        <h3>avant intégration</h3>
-
+        
         <?php
         readfile("template.php"); //a mettre dans le <body>
         ?>
+        
+        <div class="main">
+        <h3>avant intégration</h3>
+
 
         <h3>après intégration</h3>
 
@@ -20,6 +22,6 @@
         
         </div>
         
-
+        </div>
     </body>
 </html>
