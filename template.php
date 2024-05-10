@@ -37,7 +37,7 @@
 
 
         .logo {
-            font-family: 'against.projet';/* Assurez-vous que le nom de la police correspond exactement */
+            font-family: 'against.projet';
             font-size: 50px;
             background-color: none;
             color: black;                 /* Couleur du bouton à modifier en fonction de DA */
@@ -59,7 +59,7 @@
         }
 
         .bouton {
-            font-family: 'quicksand';/* Assurez-vous que le nom de la police correspond exactement */
+            font-family: 'quicksand';
             font-size: 20px;
             background-color: #F4F3F3;
             color: black;                 /* Couleur du bouton à modifier en fonction de DA */
