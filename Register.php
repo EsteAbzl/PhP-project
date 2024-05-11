@@ -122,5 +122,7 @@
                 </form>
             </div>
         </div>
+        
+        <p style="font-family: 'quicksand'; font-size: 14px; margin-left:30px; color: white;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>
     </body>
 </html>
