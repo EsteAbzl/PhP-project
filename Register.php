@@ -94,31 +94,31 @@
                 <a href="./Accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
             <div class="container">
-                <h1 style="color: white; font-family:'against.project'; font-size: 40px; margin-bottom: 30px;">Créer un compte</h1>
+                <h1 style="color: white; font-family:'against.project'; font-size: 55px; margin-bottom: 30px; margin-left: 250px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">Créer un compte</h1>
                 <form id="registration" action="#" method="POST">
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; " for="nom">Nom :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px;" type="text" id="nom" name="nom" required><br>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="nom">Nom :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px; margin-left:250px;" type="text" id="nom" name="nom" required><br>
 
-                    <label style="color: white; font-size: 30px; font-family:'quicksand'; margin-top: 20px;" for="prenom">Prénom :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px;" type="text" id="prenom" name="prenom" required><br>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand'; margin-top: 20px;margin-left:250px;" for="prenom">Prénom :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px;margin-left:250px;" type="text" id="prenom" name="prenom" required><br>
 
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; " for="email">Adresse email :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px;" type="email" id="email" name="email" required><br>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px;margin-left:250px; " for="email">Adresse email :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px;border-radius: 15px;margin-left:250px;" type="email" id="email" name="email" required><br>
 
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; " for="motdepasse">Mot de passe :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px;" type="password" id="motdepasse" name="motdepasse" required><br>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="motdepasse">Mot de passe :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px;border-radius: 15px;margin-left:250px;" type="password" id="motdepasse" name="motdepasse" required><br>
 
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; " for="datenaissance">Date de naissance :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px;" type="date" id="datenaissance" name="datenaissance" required><br>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="datenaissance">Date de naissance :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px;border-radius: 15px;margin-left:250px;" type="date" id="datenaissance" name="datenaissance" required><br>
 
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; " for="genre">Genre :</label><br>
-                    <select style="height: 35px; font-size: 25px; width: 400px;" id="genre" name="genre" required>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="genre">Genre :</label><br>
+                    <select style="height: 35px; font-size: 25px; width: 400px;border-radius: 15px;margin-left:250px;" id="genre" name="genre" required>
                         <option value="homme">Homme</option>
                         <option value="femme">Femme</option>
                         <option value="autre">Autre</option>
                     </select><br>
 
-                    <input style="margin-left: 500px;" type="submit" value="Valider" class="bouton">
+                    <input style="margin-left: 40%; margin-top: 50px;" type="submit" value="Valider" class="bouton">
                 </form>
             </div>
         </div>

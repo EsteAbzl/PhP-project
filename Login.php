@@ -53,22 +53,13 @@
                 z-index: 1;
             }
 
-            .main {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                top: 40%;
-                z-index: 2;
-                margin-left: 25%;
-            }
 
             .bouton {
                 font-size: 30px; 
                 background-color: #59EE59; 
                 color: white; 
                 text-decoration : none;
-                padding: 30px;
+                padding: 30px 40px;
                 border-radius: 20px; 
                 border: none; 
                 font-weight: bold; 
@@ -77,19 +68,20 @@
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
             }
           
-            .buttons-container {
-                position: absolute;
-                display: flex; 
-                justify-content: center;
-                align-items: center;
-                flex-direction: row; 
-                top: 58%;
-                left: 31%;
-                z-index: 999;
-            }
-
             .bouton:hover {
                 background-color: #77F977; 
+            }
+
+            .container {
+                position: absolute;
+                top: 200px;;
+                left: 700px;;
+                width: 900px;
+                height: 700px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 20px; 
+                padding: 30px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
             }
         </style>
 
@@ -101,12 +93,22 @@
             <div>
                 <a href="./Accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
-            <div class="main">
-                <p style="font-family: quicksand; font-size: 70px; color: white; font-weight: bold;">Trouver l'amour dès maintenant !</p>
-            </div>
-            <div class="buttons-container">
-                <a href="./Register.php" class="bouton">Créer un compte</a>
-                <a href="./Login.php" class="bouton">Se connecter</a>
+            <div class="container">
+                
+                <h1 style="color: white; font-family:'against.project'; font-size: 55px; margin-bottom: 30px; margin-left: 300px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  ">Connexion</h1>
+
+                
+                <form id="login" action="#" method="POST">
+                    
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 100px; margin-left:330px;" for="email">Adresse email :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="email" id="email" name="email" required><br>
+
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 300px; margin-left: 330px;" for="motdepasse">Mot de passe :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="password" id="motdepasse" name="motdepasse" required><br>
+
+
+                    <input style="margin-left: 35%; margin-top: 200px;" type="submit" value="Se connecter" class="bouton">
+                </form>
             </div>
         </div>
     </body>
