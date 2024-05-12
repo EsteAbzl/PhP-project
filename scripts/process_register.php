@@ -50,7 +50,7 @@
         mkdir("../data/profils/".$pseudo);
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "w");
         fwrite($file,   "ELEMENT;VALEUR;\n"
-                        ."status;1;\n"
+                        ."perm;1;\n"
                         ."mdp;".$_POST['motdepasse'].";\n"
                         ."nom;".$_POST['nom'].";\n"
                         ."prenom;".$_POST['prenom'].";\n"
@@ -65,9 +65,6 @@
 
         $file = fopen("../data/profils/".$pseudo."/discussion.csv", "w");
         fwrite($file,   "PSEUDO;ID_DISCUSSION;\n");
-        fclose($file);
-
-        $file = fopen("../data/profils/".$pseudo."/cookie.csv", "w");
         fclose($file);
     }
 

@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    
+    if(!isset($_SESSION['pseudo'])){
+        $_SESSION['pseudo'] = "-VISITOR-";
+        $_SESSION['perm'] = 0;
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

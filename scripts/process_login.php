@@ -36,9 +36,15 @@
     
     if(verif($pseudo)){
 
-        //modification des paramètres de session A FAIRE ICI
+        //modification des paramètres de session
+        $_SESSION['pseudo'] = $pseudo;
+
+        $file = fopen("/data");
+        for($line = fgetcsv($file,100,";","\n","\n"); $line[0] != "perm"; $line = fgetcsv($file,100,";","\n","\n"));
+        $_SESSION['perm'] = $line[1];
+        fclose($file);
     
-        echo "<script> redirection('menu'); </script>";
+        echo "<script> redirection('premium'); </script>";
     }
 
 ?>
