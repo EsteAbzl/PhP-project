@@ -15,8 +15,8 @@
         }
         fclose($file);
 
+        // On cherche le mod de passe
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "r") or die("erreur lors de l'ouverture de '/data/profils/\".$pseudo.\"/profil.csv'");
-        
         for($line = fgetcsv($file,100,";","\n","\n"); $line[0] != "mdp"; $line = fgetcsv($file,100,";","\n","\n"));
         if($_POST['motdepasse'] != $line[1]){
             echo "<script>
