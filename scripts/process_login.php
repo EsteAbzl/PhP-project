@@ -1,7 +1,7 @@
 
 <?php
     include 'redirection.php';
-// Main:
+
 
     function verif($pseudo){
         // On vérifie si le pseudo existe
@@ -30,11 +30,13 @@
         return 1;
     }
 
+
+// Main:
     $pseudo = $_POST['pseudo'];
     
     if(verif($pseudo)){
 
-        //modification des paramètres de session
+        //modification des paramètres de session A FAIRE ICI
     
         echo "<script> redirection('menu'); </script>";
     }
