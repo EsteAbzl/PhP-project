@@ -50,6 +50,7 @@
         mkdir("../data/profils/".$pseudo);
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "w");
         fwrite($file,   "ELEMENT;VALEUR;\n"
+                        ."status;1;\n"
                         ."mdp;".$_POST['motdepasse'].";\n"
                         ."nom;".$_POST['nom'].";\n"
                         ."prenom;".$_POST['prenom'].";\n"
