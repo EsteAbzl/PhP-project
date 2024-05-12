@@ -70,8 +70,8 @@
         fclose($file);
     }
 
-    // Main:
 
+// Main:
     $pseudo = $_POST['pseudo'];
     
     if(verif($pseudo)){

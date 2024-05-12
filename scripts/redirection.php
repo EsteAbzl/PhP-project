@@ -1,4 +1,7 @@
-
+<!--    
+    Script a `include './sript/redirection.php'` ajoutant la fonction JavaSript
+    'redirection(page)'.
+-->
 <?php
 const ADMIN = 3;
 const PREMIUM = 2;
