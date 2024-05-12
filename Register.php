@@ -75,12 +75,12 @@
             .container {
                 position: absolute;
                 top: 200px;;
-                left: 700px;;
+                left: 35%;;              
                 width: 900px;
                 height: 700px;
                 background-color: rgba(0, 0, 0, 0.7);
                 border-radius: 20px; 
-                padding: 30px;
+                padding: 0px 20px 100px 20px ;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
             }
         </style>
@@ -95,12 +95,16 @@
             </div>
             <div class="container">
                 <h1 style="color: white; font-family:'against.project'; font-size: 55px; margin-bottom: 30px; margin-left: 250px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">Créer un compte</h1>
-                <form id="registration" action="#" method="POST">
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="nom">Nom :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px; margin-left:250px;" type="text" id="nom" name="nom" required><br>
+                
+                <form id="registration" action="./scripts/process_register.php" method="POST">
+                <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="pseudo">Pseudo :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px; margin-left:250px;" type="text" id="pseudo" name="pseudo" required><br>
 
                     <label style="color: white; font-size: 30px; font-family:'quicksand'; margin-top: 20px;margin-left:250px;" for="prenom">Prénom :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px;margin-left:250px;" type="text" id="prenom" name="prenom" required><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px;margin-left:250px;" type="text" id="prenom" name="prenom"><br>
+
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="nom">Nom :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px; margin-left:250px;" type="text" id="nom" name="nom"><br>
 
                     <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px;margin-left:250px; " for="email">Adresse email :</label><br>
                     <input style="height: 35px; font-size: 25px; width: 400px;border-radius: 15px;margin-left:250px;" type="email" id="email" name="email" required><br>

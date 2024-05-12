@@ -98,10 +98,10 @@
                 <h1 style="color: white; font-family:'against.project'; font-size: 55px; margin-bottom: 30px; margin-left: 300px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  ">Connexion</h1>
 
                 
-                <form id="login" action="#" method="POST">
+                <form id="login" action="./scripts/process_login.php" method="POST">
                     
-                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 100px; margin-left:330px;" for="email">Adresse email :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="email" id="email" name="email" required><br>
+                    <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 100px; margin-left:330px;" for="pseudo">Pseudo :</label><br>
+                    <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="text" id="pseudo" name="pseudo" required><br>
 
                     <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 300px; margin-left: 330px;" for="motdepasse">Mot de passe :</label><br>
                     <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="password" id="motdepasse" name="motdepasse" required><br>

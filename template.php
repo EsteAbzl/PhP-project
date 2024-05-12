@@ -3,7 +3,7 @@
 
 
 <?php
-include 'script.php'; // ajoute le script permettant de vérifier les liens
+    include 'scripts/redirection.php'; // ajoute le script permettant de vérifier les liens
 ?>
 
 
