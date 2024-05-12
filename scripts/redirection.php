@@ -5,12 +5,13 @@
 <?php
 const ADMIN = 3;
 const PREMIUM = 2;
-const LOGGED = 1;
-const VISITOR = 0;
+const INSCRIT = 1;
+const VISITEUR = 0;
 
-$GLOBALS['perm'] = VISITOR; // Cette variable sera remplacé par une variable de session
-$GLOBALS['pages'] = array(  'accueil'=>"Accueil.php", 
-                            'error'=>"error.php"); // Liste de toutes les pages
+// Liste de toutes les pages
+$GLOBALS['pages'] = array(  'accueil'=>"accueil.php",
+                            'premium'=>"premium.php", 
+                            'error'=>"error.php");
                             /*recherche, notif, messagerie, profil, achat, parametres*/ 
 ?>
 
@@ -23,14 +24,22 @@ $GLOBALS['pages'] = array(  'accueil'=>"Accueil.php",
             
             case 'accueil':
                 <?php
-                    if($GLOBALS['perm'] <= LOGGED){ // c'est juste pour tester des condition, c'est pas définitif
-                        echo "location.href=\"".$GLOBALS['pages']['accueil']."\";";
+                    echo "location.href=\"".$GLOBALS['pages']['accueil']."\";";
+                ?>
+                break;
+            
+            case 'premium':
+                <?php
+                    if($_SESSION['perm'] <= INSCRIT){
+                        echo "location.href=\"".$GLOBALS['pages']['premium']."\";";
                     }
                     else{
-                        echo "location.href=\"".$GLOBALS['pages']['error']."\";";
+                        redirection('error');
                     }
-                    ?>
+                ?>
                 break;
+                
+
                 
             case 'error':
                 <?php
@@ -45,15 +54,3 @@ $GLOBALS['pages'] = array(  'accueil'=>"Accueil.php",
         }
     }
 </script>
-    
-<!-- Affichage permettant de tester le script -->
-<!--
-<!DOCTYPE html>
-<head>
-    <title>Test de script</title>
-</head>
-<body>
-    <h1>Test de script</h1>
-    <button onclick="redirection('accueil')">Vers Test [admin only]</button><button onclick="redirection('error')">Vers Erreur</button>
-</body>
--->
