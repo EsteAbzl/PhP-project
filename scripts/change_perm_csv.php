@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
     $chemin_fichier = "../data/profils/".$_SESSION['pseudo']."/profil.csv";
@@ -24,6 +25,8 @@ session_start();
         fwrite($file, implode(";", $deuxieme_ligne));
         fwrite($file, "\n");
 
+
+        $_SESSION['perm'] = "2";
         fclose($file);
 
 
@@ -31,6 +34,4 @@ session_start();
     else {
         echo "La deuxième ligne n'est pas 'perm;1;'";
     }
-
-   // $_SESSION['perm'] = "2";
 ?>

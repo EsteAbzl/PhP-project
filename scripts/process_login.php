@@ -54,10 +54,10 @@
 
 // Main:
     $pseudo = $_POST['pseudo'];
-    
+
     if(verif($pseudo)){
         load_session($pseudo);
-    
+
         echo "<script>location.href=\"../premium.php\";</script>";
     }
 
