@@ -1,7 +1,6 @@
 <?php
     /*
-        Charge la session ou la crée.
-        Vérifie si un profil est chargé, renvoi vers l'accueil si ce n'est pas le cas.
+        Supprime la session actuelle puis renvoi vers l'accueil.
     */
 
     session_start();

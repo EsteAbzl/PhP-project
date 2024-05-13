@@ -1,12 +1,16 @@
 <?php
     /*
         Charge la session ou la crée.
-        Vérifie si un profil est chargé, renvoi vers l'accueil si ce n'est pas le cas.
+        
+        Vérifie si un profil est chargé, 
+        renvoi vers l'accueil si ce n'est pas le cas.
     */
 
     session_start();
 
-    echo "[Profil]: ".$_SESSION['pseudo']."</br>[Permission]: ".$_SESSION['perm'];
+    echo "  >Info de session</br>
+            ||[Profil]: ".$_SESSION['pseudo']."</br>
+            ||[Permission]: ".$_SESSION['perm'];
     
     if(!isset($_SESSION['perm']) || $_SESSION['perm'] == 0){
         header("Location: accueil.php"); // note: l'accueil initialise la session si elle n'existe pas encore
