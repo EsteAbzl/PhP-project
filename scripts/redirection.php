@@ -2,6 +2,7 @@
     Script a `include './sript/redirection.php'` ajoutant la fonction JavaSript
     'redirection(page)'.
 -->
+  
 <?php
 session_start();
 
@@ -15,12 +16,14 @@ $racine = "http://".$_SERVER['SERVER_NAME'];
 $GLOBALS['pages'] = array(  'accueil'=>$racine."/accueil.php",
                             'premium'=>$racine."/premium.php", 
                             'error'=>$racine."/error.php");
-                            /*recherche, notif, messagerie, profil, achat, parametres*/ 
+                            //recherche, notif, messagerie, profil, achat, parametres*
+
+
 ?>
 
 
-
 <script>
+
     function redirection(page){
         window.alert("activation du portail interspacial 👴");
         switch(page){                
@@ -57,3 +60,5 @@ $GLOBALS['pages'] = array(  'accueil'=>$racine."/accueil.php",
         }
     }
 </script>
+
+-->

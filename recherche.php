@@ -1,3 +1,16 @@
+<?php
+    include 'scripts/check_session.php';
+
+    /*
+    if($_SESSION['perm'] != 1){
+        echo "  <script>
+                    window.alert(\"Vous n'avez pas les perms\");
+                </script>";
+                
+        header("Location: homepage.php");
+    }*/
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

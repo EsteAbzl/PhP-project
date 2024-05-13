@@ -1,9 +1,17 @@
-<!--    
-    Vérifie la session
--->
 <?php
+    /*
+        Charge la session ou la crée.
+        Vérifie si un profil est chargé, renvoi vers l'accueil si ce n'est pas le cas.
+    */
+
     session_start();
-    if(!isset($_SESSION['pseudo'])){
-        header("Location: acceuil.php");
+
+    echo "[Profil]: ".$_SESSION['pseudo']."</br>[Permission]: ".$_SESSION['perm'];
+    
+    if(!isset($_SESSION['perm']) || $_SESSION['perm'] == 0){
+        header("Location: accueil.php"); // note: l'accueil initialise la session si elle n'existe pas encore
+        echo "  <script>
+                    widow.alert(\"Vous n'êtes pas connecté.\")
+                </script>";
     }
 ?>
