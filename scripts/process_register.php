@@ -83,7 +83,7 @@
 
         creationProfil($pseudo);
     
-        header("Location: ../accueil.php");
+        echo "<script>location.href=\"../accueil.php\";</script>";
     }
 
 ?>

@@ -91,7 +91,7 @@
     <body>
         <div class="overlay">
             <div>
-                <a href="./Accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
+                <a href="./accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
             <div class="container">
                 

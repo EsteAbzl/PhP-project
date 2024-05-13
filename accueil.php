@@ -109,7 +109,7 @@
     <body>
         <div class="overlay">
             <div>
-                <a href="./Accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
+                <a href="./accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
             <div class="main">
                 <p style="font-family: quicksand; font-size: 70px; color: white; font-weight: bold;">Trouver l'amour dès maintenant !</p>

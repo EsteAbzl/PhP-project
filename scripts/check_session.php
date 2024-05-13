@@ -13,9 +13,11 @@
             ||[Permission]: ".$_SESSION['perm'];
     
     if(!isset($_SESSION['perm']) || $_SESSION['perm'] == 0){
-        header("Location: accueil.php"); // note: l'accueil initialise la session si elle n'existe pas encore
+
         echo "  <script>
-                    widow.alert(\"Vous n'êtes pas connecté.\")
-                </script>";
-    }
+                        widow.alert(\"Vous n'êtes pas connecté.\")
+                    </script>";
+        }
+
+        echo "<script>location.href=\"../accueil.php\";</script>"; // note: l'accueil initialise la session si elle n'existe pas encore
 ?>

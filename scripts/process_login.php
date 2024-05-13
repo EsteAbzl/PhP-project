@@ -58,7 +58,7 @@
     if(verif($pseudo)){
         load_session($pseudo);
     
-        Header("Location: ../premium");
+        echo "<script>location.href=\"../premium.php\";</script>";
     }
 
 ?>

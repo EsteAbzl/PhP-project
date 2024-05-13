@@ -91,7 +91,7 @@
     <body>
         <div class="overlay">
             <div>
-                <a href="./Accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
+                <a href="./accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
             <div class="container">
                 <h1 style="color: white; font-family:'against.project'; font-size: 55px; margin-bottom: 30px; margin-left: 250px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">Créer un compte</h1>
