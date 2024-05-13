@@ -35,5 +35,5 @@ $chemin_fichier = "../data/profils/".$_SESSION['pseudo']."/profil.csv";
  else {
      echo "La deuxième ligne n'est pas 'perm;2;'";
  }
-
-?>
+echo "<script>location.href=\"../premium.php\";</script>";
+?>*
