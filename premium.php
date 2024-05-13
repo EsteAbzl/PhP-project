@@ -258,7 +258,7 @@
     <script>
         function modif_perm() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "./scripts/change_perm_csv.php", true);
+            xhr.open("GET", "./scripts/change_perm2.php", true);
             xhr.onload = function() {
                 if (xhr.status == 200) {
                     // Traiter la réponse du serveur si nécessaire
