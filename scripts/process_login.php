@@ -1,4 +1,3 @@
-
 <?php
     /*
         Vérifie le mot de passe et le pseudo.
@@ -37,10 +36,7 @@
     function load_session($pseudo){
     /*Modification des paramètres de session*/
 
-        //On clear le profil avant de charger le nouveau
-        session_destroy();
-
-        session_start();
+        session_start(); // Session start doit être avant toute sortie HTML
         //pseudo du profil
         $_SESSION['pseudo'] = $pseudo;
 
@@ -51,7 +47,6 @@
         fclose($file);
     }
 
-
 // Main:
     $pseudo = $_POST['pseudo'];
 
@@ -60,5 +55,4 @@
 
         echo "<script>location.href=\"../premium.php\";</script>";
     }
-
 ?>
