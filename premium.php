@@ -1,14 +1,14 @@
 <?php
     include 'scripts/check_session.php';
-    echo $_SESSION['pseudo'].$_SESSION['perm'];
 
+    /*
     if($_SESSION['perm'] != 1){
-       echo "<script>
-                window.alert(\"Vous n'avez pas les perms\");
-                history.back();
-                quit();
-            </script>";
-    }
+        echo "  <script>
+                    window.alert(\"Vous n'avez pas les perms\");
+                </script>";
+                
+        header("Location: homepage.php");
+    }*/
 ?>
 
 
@@ -169,7 +169,7 @@
     
 <body>
 
-    <a href="./Home.php" class="cross_bouton"><img src="./icones/006-cross.png" alt="Icône" style="width: 30px; height: 30px; "></a>
+    <a href="home.php" class="cross_bouton"><img src="./icones/006-cross.png" alt="Icône" style="width: 30px; height: 30px; "></a>
     
     <div class="container">
         <div>

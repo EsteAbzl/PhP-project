@@ -1,11 +1,11 @@
 <?php
     session_start();
-    
-    if(!isset($_SESSION['pseudo'])){
+
+    // Initialise les parametres de session si celle-ci vient d'être créée
+    if(!isset($_SESSION['perm'])){
         $_SESSION['pseudo'] = "-VISITOR-";
         $_SESSION['perm'] = 0;
     }
-    
 ?>
 
 <!DOCTYPE html>
@@ -115,8 +115,8 @@
                 <p style="font-family: quicksand; font-size: 70px; color: white; font-weight: bold;">Trouver l'amour dès maintenant !</p>
             </div>
             <div class="buttons-container">
-                <a href="./Register.php" class="bouton">Créer un compte</a>
-                <a href="./Login.php" class="bouton">Se connecter</a>
+                <a href="register.php" class="bouton">Créer un compte</a>
+                <a href="login.php" class="bouton">Se connecter</a>
             </div>
         </div>
         <p style="font-family: 'quicksand'; font-size: 14px; margin-left:30px; color: white;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>

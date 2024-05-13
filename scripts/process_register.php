@@ -1,7 +1,13 @@
 <?php
+    /*
+        Vérifie si un nouveau compte peut être créé.
+        Crée et initialise les fichier en lien avec le nouveau profil
+    */
 
-    function verif($pseudo){
     
+    function verif($pseudo){
+    /*Vérifie la conformitée du nouveau compte*/
+
         $caracteresInterdit = '/[][(){}<>\/+"*%&=?`^\'!$_:;,-]/';
         
         // Si la chaîne contient des caractères spéciaux
@@ -39,6 +45,7 @@
     }
     
     function creationProfil($pseudo){
+    /*Création et modification des fichiers liés au nouveau profil*/
         echo "<script>
                 window.alert(\"Création du profil..\");
             </script>";
@@ -71,7 +78,7 @@
 
 // Main:
     $pseudo = $_POST['pseudo'];
-    
+
     if(verif($pseudo)){
 
         creationProfil($pseudo);
