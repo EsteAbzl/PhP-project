@@ -17,7 +17,8 @@
         echo "  <script>
                         widow.alert(\"Vous n'êtes pas connecté.\")
                     </script>";
-        echo "<script>location.href=\"../accueil.php\";</script>"; // note: l'accueil initialise la session si elle n'existe pas encore
+        //echo "<script>location.href=\"../accueil.php\";</script>"; // note: l'accueil initialise la session si elle n'existe pas encore
         }
 
+        
 ?>

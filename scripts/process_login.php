@@ -38,7 +38,7 @@
     /*Modification des paramètres de session*/
 
         //On clear le profil avant de charger le nouveau
-        session_destroy();
+       // session_destroy();
 
         session_start();
         //pseudo du profil

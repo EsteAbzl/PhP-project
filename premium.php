@@ -1,14 +1,6 @@
 <?php
     include 'scripts/check_session.php';
 
-    /*
-    if($_SESSION['perm'] != 1){
-        echo "  <script>
-                    window.alert(\"Vous n'avez pas les perms\");
-                </script>";
-                
-        header("Location: homepage.php");
-    }*/
 ?>
 
 
@@ -251,22 +243,51 @@
     </div>
 
     <div class="notification" id="notification">
-        <span><strong>Vous venez de souscrire à 
-            l'abonnement Premium.<strong></span>
-                <br>
-        <button style = "margin-left:300px;"class="bouton" onclick="hideNotification()">Suivant</button> 
+        <span><strong>Vous venez de souscrire à l'abonnement Premium.</strong></span>
+        <br>
+        <button style="margin-left:300px;" class="bouton" onclick="hideNotification()">Suivant</button>
     </div>
 
+    <div class="notification" id="notification2">
+        <span><strong>Vous avez déjà souscrit à un abonnement</strong></span>
+        <br>
+        <button style="margin-left:300px;" class="bouton" onclick="hideNotification()">Suivant</button>
+    </div>
+
+    
     <script>
+
+        
+        function check_perm() {
+            <?php
+            if(!isset($_SESSION['perm']) && ($_SESSION['perm'] == 2 || $_SESSION['perm'] == 3)) {
+                echo "return 1;";
+            } else {
+                echo "return 0;";
+            }
+            ?>
+        } 
+        
         function showNotification() {
-            var notification = document.getElementById("notification");
-            notification.style.display = "block"; // Affiche la notification en changeant son style d'affichage
+            var notification;
+            if (check_perm() != 1) {
+                notification = document.getElementById("notification");
+                
+         //   modif_perm();
+                
+            } else {
+                notification = document.getElementById("notification2");
+            }
+            notification.style.display = "block";
         }
 
         function hideNotification() {
             var notification = document.getElementById("notification");
-            notification.style.display = "none"; // Masque la notification lorsque le bouton est cliqué
+            notification.style.display = "none";
         }
+
+
+        
     </script>
     
     <br>
