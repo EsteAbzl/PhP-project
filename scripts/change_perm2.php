@@ -3,8 +3,6 @@
 session_start();
 
 
-    function change_perm2 //Pour s'abonner
-    {
         $chemin_fichier = "../data/profils/".$_SESSION['pseudo']."/profil.csv";
 
 
@@ -37,7 +35,7 @@ session_start();
         else {
             echo "La deuxième ligne n'est pas 'perm;1;'";
         }
-    }
     
     echo "<script>location.href=\"../premium.php\";</script>";
+    
 ?>
