@@ -251,16 +251,25 @@
     <div class="notification" id="notification2">
         <span><strong>Vous avez déjà souscrit à un abonnement</strong></span>
         <br>
-        <button style="margin-left:300px;" class="bouton" onclick="hideNotification()">Suivant</button>
+        <button style="margin-left:300px;" class="bouton" onclick="hideNotification2()">Suivant</button>
     </div>
 
     
     <script>
-
+        function modif_perm() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "./scripts/change_perm_csv.php", true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Traiter la réponse du serveur si nécessaire
+                }
+            };
+            xhr.send();
+        }
         
         function check_perm() {
             <?php
-            if(!isset($_SESSION['perm']) && ($_SESSION['perm'] == 2 || $_SESSION['perm'] == 3)) {
+            if ($_SESSION['perm'] == "2" || $_SESSION['perm'] == "3") {
                 echo "return 1;";
             } else {
                 echo "return 0;";
@@ -273,8 +282,8 @@
             if (check_perm() != 1) {
                 notification = document.getElementById("notification");
                 
-         //   modif_perm();
-                
+                modif_perm();
+                        
             } else {
                 notification = document.getElementById("notification2");
             }
@@ -283,6 +292,11 @@
 
         function hideNotification() {
             var notification = document.getElementById("notification");
+            notification.style.display = "none";
+        }
+        
+        function hideNotification2() {
+            var notification = document.getElementById("notification2");
             notification.style.display = "none";
         }
 
