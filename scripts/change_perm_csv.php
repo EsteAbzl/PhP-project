@@ -34,4 +34,6 @@ session_start();
     else {
         echo "La deuxième ligne n'est pas 'perm;1;'";
     }
+
+    echo "<script>location.href=\"../premium.php\";</script>";
 ?>
