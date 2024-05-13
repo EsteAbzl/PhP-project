@@ -3,15 +3,18 @@
     'redirection(page)'.
 -->
 <?php
+session_start();
+
 const ADMIN = 3;
 const PREMIUM = 2;
 const INSCRIT = 1;
 const VISITEUR = 0;
 
 // Liste de toutes les pages
-$GLOBALS['pages'] = array(  'accueil'=>"accueil.php",
-                            'premium'=>"premium.php", 
-                            'error'=>"error.php");
+$racine = "http://".$_SERVER['SERVER_NAME'];
+$GLOBALS['pages'] = array(  'accueil'=>$racine."/accueil.php",
+                            'premium'=>$racine."/premium.php", 
+                            'error'=>$racine."/error.php");
                             /*recherche, notif, messagerie, profil, achat, parametres*/ 
 ?>
 
@@ -30,11 +33,11 @@ $GLOBALS['pages'] = array(  'accueil'=>"accueil.php",
             
             case 'premium':
                 <?php
-                    if($_SESSION['perm'] <= INSCRIT){
+                    if($_SESSION['perm'] <= 1){
                         echo "location.href=\"".$GLOBALS['pages']['premium']."\";";
                     }
                     else{
-                        redirection('error');
+                        //echo "<script> redirection('error'); </script>";
                     }
                 ?>
                 break;
