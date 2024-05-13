@@ -39,12 +39,12 @@
         //modification des paramètres de session
         $_SESSION['pseudo'] = $pseudo;
 
-        $file = fopen("/data");
+        $file = fopen("../data/profils/".$pseudo."/profil.csv", "r");
         for($line = fgetcsv($file,100,";","\n","\n"); $line[0] != "perm"; $line = fgetcsv($file,100,";","\n","\n"));
         $_SESSION['perm'] = $line[1];
         fclose($file);
     
-        echo "<script> redirection('premium'); </script>";
+        Header("Location: ../premium");
     }
 
 ?>

@@ -110,7 +110,7 @@
             <a class="bouton" onclick="redirection('notif')"><img src="./icones/043-warning.png" alt="Icône" class="image">Notifications</a>
             <a class="bouton" onclick="redirection('messagerie')"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a class="bouton" onclick="redirection('profil')"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
-            <a class="bouton" onclick="redirection('achat')"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
+            <a class="bouton" onclick="redirection('premium')"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
             <a class="bouton" onclick="redirection('parametres')"><img src="./icones/paramètre.png" alt="Icône" class="image">Paramètres</a>
         </div>
 

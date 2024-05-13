@@ -1,3 +1,17 @@
+<?php
+    include 'scripts/check_session.php';
+    echo $_SESSION['pseudo'].$_SESSION['perm'];
+
+    if($_SESSION['perm'] != 1){
+       echo "<script>
+                window.alert(\"Vous n'avez pas les perms\");
+                history.back();
+                quit();
+            </script>";
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
     
