@@ -18,65 +18,70 @@
             font-family: 'quicksand';
             src: url('./fonts/Quicksand_Light.otf') format('opentype');
         }
-
-        .main {
-            margin-left: 500px;
-        }
-
+        
         body{
             background-color: #EBFFEB;
         }
 
-            
+        /*pour ecrire dans la page*/
+        .main { 
+            margin-left: 25vw;
+        }
+
+        /*permet de se déplacer dans le site*/
         .sommaire {
             position: fixed;
-            top: 0;
-            left: 0;
+                top: 0;
+                left: 0;
+                width: 23vw;
+                height: 100vh;
+                z-index: 999;
+
+            padding: 0;
             background-color: white;
-            padding: 10px;
-            width: 20%;
-            height: 100%;
-            z-index: 999;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 2vh rgba(0, 0, 0, 0.8);
         }
 
 
         .logo {
-            font-family: 'against.projet';
-            font-size: 50px;
-            background-color: none;
-            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
-            text-decoration: none;
-            padding: 30px 2px;
-            width: 300px;
+            margin-left: 15%;
             box-sizing: border-box;
-            border-radius: 10px;
-            text-align: center;
+            
+            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
+            background-color: none;
             transition: background-color 0.3s ease;
-            margin-left: 30px;
+            
+            font-family: 'against.projet';
+            font-size: 5vh;
+            text-align: left;
+            text-decoration: none;
         }
 
 
         .boutons {
             display: flex;
             flex-direction: column;
-            height: calc(100% - 40px);
+            height: 100%;
         }
 
         .bouton {
-            font-family: 'quicksand';
-            font-size: 20px;
-            background-color: #F4F3F3;
-            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
-            text-decoration: none;
-            padding: 20px 0px 40px 40px;
-            width: 300px;
+            margin-left: 15%;
+            margin-top: 1vh;
+            padding: 2vh 0vh 2vh 8%;
+            width: 70%;
+            border-radius: 2vh;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
             box-sizing: border-box;
-            border-radius: 10px;
-            text-align: left;
+            
+            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
+            background-color: #F4F3F3;
             transition: background-color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin-left: 70px;
+            
+            font-family: 'quicksand';
+            font-size-adjust: initial;
+            font-size: 2vh;
+            text-decoration: none;
+            text-align: left;
         }
 
         .bouton:hover {
@@ -85,10 +90,11 @@
 
         .image {
             position: relative;
-            top: 10px;
-            margin-right: 30px;
-            width: 50px;
-            height: 50px;
+            top: 0.5vh;
+            margin-right: 2.5vh;
+
+            width: 5vh;
+            height: 5vh;
             opacity: 0.5;
         }
     </style>
@@ -101,7 +107,7 @@
     
     <div class="sommaire">
         <div class="logo">
-            <a href="homepage.php" class="logo"><img src="./icones/046-envato.png" alt="Icône" class="image">Dater</a>
+            <img src="./icones/046-envato.png" alt="Icône" class="image">Dater
         </div>
         <div class="boutons">
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
