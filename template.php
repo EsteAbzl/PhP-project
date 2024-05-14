@@ -20,7 +20,7 @@
         }
         
         body{
-            background-color: #EBFFEB;
+            background-color: white;
         }
 
         /*pour ecrire dans la page*/
