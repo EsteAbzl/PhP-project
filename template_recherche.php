@@ -34,7 +34,7 @@
 
         #search-btn {
             position: absolute;
-            right: 760px;
+            right: 520px;
             padding: 12px 1px;
             background-color: lightgrey;
             color: black;
