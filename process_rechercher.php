@@ -43,9 +43,8 @@ $resultats = rechercherProfils($recherche);
 // modif hauteur de la liste en fonct° de nbr de résultats
 $hauteurListe = count($resultats) * 500; 
 
-
 if (!empty($resultats)) {
-    echo '<div style="text-align: center; width: 24vw; height: ' . $hauteurListe . 'px; overflow-y: hidden; margin: 0 auto;">'; 
+    echo '<div style="position: relative; top: 20vh; text-align: center; width: 24vw; height: ' . $hauteurListe . 'px; overflow-y: hidden; margin: 0 auto;">'; 
     echo '<ul style="list-style: none; padding: ;">'; 
     foreach ($resultats as $resultat) {
         
@@ -67,6 +66,7 @@ if (!empty($resultats)) {
     }
     echo '</ul>';
     echo '</div>'; 
+
 } else {
     echo 'Aucun résultat trouvé.';
 }
