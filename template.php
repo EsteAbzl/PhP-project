@@ -64,10 +64,10 @@
         }
 
         .bouton {
+            width: 70%;
             margin-left: 15%;
             margin-top: 1vh;
             padding: 1vh 0vh 2vh 4%;
-            width: 70%;
             border-radius: 2vh;
             box-shadow: 0 0 0.8vh rgba(0, 0, 0, 0.3);
             box-sizing: border-box;
