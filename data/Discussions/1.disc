@@ -1,0 +1,17 @@
+[
+  {
+    "sender": "test",
+    "message": "Salut, comment ça va ?",
+    "timestamp": "2024-05-14T10:00:00"
+  },
+  {
+    "sender": "Tarckeno",
+    "message": "La ferme!",
+    "timestamp": "2024-05-14T10:05:00"
+  },
+  {
+    "sender": "test",
+    "message": "Je vais bien aussi, merci !",
+    "timestamp": "2024-05-14T10:10:00"
+  }
+]
