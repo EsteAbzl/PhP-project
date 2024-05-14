@@ -24,7 +24,7 @@
         }
 
         body{
-            background-color: #EBFFEB;
+            background-color: white;
         }
 
             
