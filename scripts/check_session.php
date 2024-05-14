@@ -8,10 +8,10 @@
 
     session_start();
 
-    echo "  Info de session</br>
+    /*echo "  Info de session</br>
             ||[Profil]: ".$_SESSION['pseudo']."</br>
             ||[Permission]: ".$_SESSION['perm'];
-    
+    */
     if(!isset($_SESSION['perm']) || $_SESSION['perm'] == 0){
 
         echo "  <script>
