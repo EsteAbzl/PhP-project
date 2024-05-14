@@ -1,5 +1,5 @@
 <?php
-
+include 'scripts/check_session.php';
 include 'template.php';
 include 'template_recherche.php';
 
