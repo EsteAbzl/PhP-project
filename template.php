@@ -39,7 +39,7 @@
 
             padding: 0;
             background-color: white;
-            box-shadow: 0 0 2vh rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
         }
 
 
@@ -61,16 +61,15 @@
         .boutons {
             display: flex;
             flex-direction: column;
-            height: 100%;
         }
 
         .bouton {
             margin-left: 15%;
             margin-top: 1vh;
-            padding: 2vh 0vh 2vh 8%;
+            padding: 1vh 0vh 2vh 4%;
             width: 70%;
             border-radius: 2vh;
-            box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
+            box-shadow: 0 0 0.8vh rgba(0, 0, 0, 0.3);
             box-sizing: border-box;
             
             color: black;                 /* Couleur du bouton à modifier en fonction de DA */
@@ -91,11 +90,11 @@
         .image {
             position: relative;
             top: 0.5vh;
-            margin-right: 2.5vh;
+            margin-right: 2vh;
 
-            width: 5vh;
-            height: 5vh;
-            opacity: 0.5;
+            width: 6vh;
+            height: 6vh;
+            opacity: 0.6;
         }
     </style>
 </head>
