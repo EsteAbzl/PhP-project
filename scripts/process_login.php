@@ -46,13 +46,12 @@
         $_SESSION['perm'] = intval($line[1]);   // 'intval()' permet de passer un caractère en nombre
         fclose($file);
     }
-
 // Main:
     $pseudo = $_POST['pseudo'];
 
     if(verif($pseudo)){
         load_session($pseudo);
 
-        echo "<script>location.href=\"../premium.php\";</script>";
+        echo "<script>location.href=\"../homepage.php\";</script>";
     }
 ?>
