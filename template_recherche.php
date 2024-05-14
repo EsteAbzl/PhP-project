@@ -9,6 +9,10 @@
             src: url('./fonts/Quicksand_Light.otf') format('opentype');
         }
 
+        .main { 
+            top: 20vw;
+        }
+
         header {
             position: absolute;
                 top: 0;
