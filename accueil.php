@@ -6,6 +6,10 @@
         $_SESSION['pseudo'] = "-VISITOR-";
         $_SESSION['perm'] = 0;
     }
+
+    echo "  >Info de session</br>
+            ||[Profil]: ".$_SESSION['pseudo']."</br>
+            ||[Permission]: ".$_SESSION['perm'];
 ?>
 
 <!DOCTYPE html>

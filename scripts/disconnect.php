@@ -7,5 +7,5 @@
 
     session_destroy();
 
-echo "<script>location.href=\"../accueil.php\";</script>";
+    echo "<script>location.href=\"../accueil.php\";</script>";
 ?>
