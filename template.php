@@ -101,11 +101,11 @@
     
     <div class="sommaire">
         <div class="logo">
-            <a href="#" class="logo"><img src="./icones/046-envato.png" alt="Icône" class="image">Dater</a>
+            <a href="homepage.php" class="logo"><img src="./icones/046-envato.png" alt="Icône" class="image">Dater</a>
         </div>
         <div class="boutons">
-            <a href="accueil.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
-            <a href="recherche.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
+            <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
+            <a href="recherche_page.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
             <a href="notif.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Notifications</a>
             <a href="contact.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a href="profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
