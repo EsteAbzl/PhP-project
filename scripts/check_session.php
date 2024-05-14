@@ -1,14 +1,14 @@
 <?php
     /*
         Charge la session ou la crée.
-        
+
         Vérifie si un profil est chargé, 
         renvoi vers l'accueil si ce n'est pas le cas.
     */
 
     session_start();
 
-    echo "  >Info de session</br>
+    echo "  Info de session</br>
             ||[Profil]: ".$_SESSION['pseudo']."</br>
             ||[Permission]: ".$_SESSION['perm'];
     
@@ -17,8 +17,29 @@
         echo "  <script>
                         widow.alert(\"Vous n'êtes pas connecté.\")
                     </script>";
-        //echo "<script>location.href=\"../accueil.php\";</script>"; // note: l'accueil initialise la session si elle n'existe pas encore
-        }
-
         
+        echo "<script>location.href=\"./accueil.php\";</script>"; // note: l'accueil initialise la session si elle n'existe pas encore
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>

@@ -43,7 +43,7 @@
         //perm du profil
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "r");
         for($line = fgetcsv($file,100,";","\n","\n"); $line[0] != "perm"; $line = fgetcsv($file,100,";","\n","\n"));
-        $_SESSION['perm'] = $line[1];
+        $_SESSION['perm'] = intval($line[1]);   // 'intval()' permet de passer un caractère en nombre
         fclose($file);
     }
 
