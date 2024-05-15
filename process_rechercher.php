@@ -4,6 +4,8 @@ include 'template.php';
 include 'template_recherche.php';
 
 function rechercherProfils($recherche) {
+    //Note: Cherche les pseudo, pas les centre d'interet (pour l'instant?)
+
     $resultats = array();
 
     $dossierProfils = 'data/profils/';
@@ -20,7 +22,7 @@ function rechercherProfils($recherche) {
             $cheminPhoto = $dossierProfils . $pseudo . '/pfp.jpg';
 
             // vérifier si le pseudo correspond à la recherche
-            if (preg_match("/$recherche/i", $pseudo)) {
+            if (preg_match("/$recherche/i", $pseudo) && $pseudo != $_SESSION['pseudo']) {
                 $resultats[] = array(
                     'pseudo' => $pseudo,
                     'lien_photo' => $cheminPhoto
@@ -34,30 +36,100 @@ function rechercherProfils($recherche) {
     return $resultats;
 }
 
-$recherche = isset($_GET['q']) ? $_GET['q'] : '';
 
+// Main
 
+$recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
 
 $resultats = rechercherProfils($recherche);
 
 // modif hauteur de la liste en fonct° de nbr de résultats
-$hauteurListe = count($resultats) * 500; 
+$hauteurListe = count($resultats) * 20 + 10; 
+
+?>
+    <style>
+        button.recherche{
+            cursor: pointer;
+            border: none; 
+            background: none; 
+            display: flex; 
+            align-items: center;
+        }
+
+        div.main {
+            position: absolute; 
+            top: 20vh;
+            left: 25vw;
+
+            width: 70vw;
+            height:<?php echo $hauteurListe; ?>vh;
+
+            overflow-y: hidden; 
+            margin: 0;
+            background-color: none;
+
+            font-size: 5vh;
+            text-align: left;
+        }
+
+        ul.recherche {
+            list-style: none; 
+            padding: 0;
+        }
+
+        li.recherche{
+            position: relative;
+            width: 50vw;
+            height: 15vh;
+
+            padding-left: 2vw;
+            margin-left: 5vh;
+            margin-bottom: 5vh; // distance entre chaque profils 
+
+            border-color: black;
+            border-style: solid;
+            border-radius: 1vh;
+            box-shadow: 0 0 2vh 1vh #6be8b470;
+            background: linear-gradient(#6be8b49d, #d44fae80); 
+            
+            cursor: pointer;
+            display: flex; 
+            align-items: center;
+        }
+
+        img.recherche{
+            width: 11vh; 
+            height: 11vh; 
+            margin-right: 10vh;
+            
+            border-radius: 50%; 
+        }
+
+        span.recherche{
+            font-family: 'quicksand', sans-serif;
+            font-size: 6vh;
+            font-weight: bold;
+        }
+    </style>
+
+<?php
 
 if (!empty($resultats)) {
-    echo '<div style="position: relative; top: 20vh; text-align: center; width: 24vw; height: ' . $hauteurListe . 'px; overflow-y: hidden; margin: 0 auto;">'; 
-    echo '<ul style="list-style: none; padding: ;">'; 
+    echo '<div class="main">'
+            .'<ul class="recherche">'; 
+
     foreach ($resultats as $resultat) {
+        echo    '<script>
+                    function link(){
+                        location.href="./show_profil.php?pseudo='.$resultat['pseudo'].'";
+                    }
+                </script>';
+
         
+        echo    '<li class="recherche" onclick="link()">'
+                    .'<img class="recherche" src="' . $resultat['lien_photo'] . '" alt="Photo de profil">';
 
-        echo '<li style="margin-bottom: 10px; border: 2px solid lightgrey; padding: 50px;">'; 
-
-        echo '<a href="show_profil.php?pseudo=' . $resultat['pseudo'] . '" style="text-decoration: none;">';
-
-        echo '<button style="border: none; background: none; display: flex; align-items: center;">';
-
-        echo '<img src="' . $resultat['lien_photo'] . '" alt="Photo de profil" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">';
-
-        echo '<span style="font-weight: bold; font-size: 30px; font-family: \'quicksand\', sans-serif;">' . $resultat['pseudo'] . '</span>';
+        echo '<span class="recherche">' . $resultat['pseudo'] . '</span>';
 
         echo '</button>';
 
@@ -68,7 +140,7 @@ if (!empty($resultats)) {
     echo '</div>'; 
 
 } else {
-    echo 'Aucun résultat trouvé.';
+    echo '<div class="main"> Aucun résultat trouvé. </div>';
 }
 
 ?>
