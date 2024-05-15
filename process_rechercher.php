@@ -127,19 +127,15 @@ if (!empty($resultats)) {
 
         
         echo    '<li class="recherche" onclick="link()">'
-                    .'<img class="recherche" src="' . $resultat['lien_photo'] . '" alt="Photo de profil">';
-
-        echo '<span class="recherche">' . $resultat['pseudo'] . '</span>';
-
-        echo '</button>';
-
-        echo '</a>';
-        echo '</li>';
+                    .'<img class="recherche" src="' . $resultat['lien_photo'] . '" alt="Photo de profil">'
+                    .'<span class="recherche">' . $resultat['pseudo'] . '</span>'
+               .'</li>';
     }
     echo '</ul>';
     echo '</div>'; 
 
-} else {
+}
+else{
     echo '<div class="main"> Aucun résultat trouvé. </div>';
 }
 
