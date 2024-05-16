@@ -52,7 +52,7 @@
             transition: background-color 0.3s ease;
             
             font-family: 'against.projet';
-            font-size: 5vh;
+            font-size: 3vw;
             text-align: left;
             text-decoration: none;
         }
@@ -67,8 +67,8 @@
             width: 70%;
             margin-left: 15%;
             margin-top: 1vh;
-            padding: 1vh 0vh 2vh 4%;
-            border-radius: 2vh;
+            padding: 2% 0 4% 4%;
+            border-radius: 1.25vw;
             box-shadow: 0 0 0.8vh rgba(0, 0, 0, 0.3);
             box-sizing: border-box;
             
@@ -78,7 +78,7 @@
             
             font-family: 'quicksand';
             font-size-adjust: initial;
-            font-size: 2vh;
+            font-size: 1.5vw;
             text-decoration: none;
             text-align: left;
         }
@@ -90,10 +90,10 @@
         .image {
             position: relative;
             top: 0.5vh;
-            margin-right: 2vh;
+            margin-right: 1vw;
 
-            width: 6vh;
-            height: 6vh;
+            width: 2.5vw;
+            height: 2.5vw;
             opacity: 0.6;
         }
     </style>

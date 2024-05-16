@@ -20,7 +20,7 @@
                 top: 0;
                 left: 0;
                 width: 100vw;
-                height: 18vh;
+                height: 18%;
                 z-index: 500;
                 
             padding: 0;
@@ -38,11 +38,12 @@
                 top: 6vh;
                 left: 30vw;
                 width: 30vw;
-            padding: 0.5vh 1vh 0.5vh;
+            padding: 0.5vh 1vw 0.5vh;
 
             box-shadow: 0 0 3vh 1vh rgba(227, 227, 227, 0.664);
             border-radius: 2vh;
             border-style: hidden;
+            outline: transparent;
                         
             font-family: 'quicksand';
             font-size: 3vh;
@@ -50,17 +51,17 @@
 
         #button-box {
             position: absolute;
-                top: 3vh;
-                right: 20vw;
-                width: 10vh;
-                height: 10vh;
+                top: 1.5vh;
+                right: 40vw;
+                width: 5vh;
+                height: 5vh;
             
-            box-shadow: 0 0 1.5vh 0.5vh rgba(12, 18, 52, 0.13);
+            box-shadow: 0 0 1.5vh 0.5vh rgba(145, 145, 145, 0.527);
             border-radius: 5vh;
             border-style: hidden;
             
             color: black;
-            background-color: rgba(12, 18, 52, 0.14);
+            background-color: rgba(255, 255, 255, 0.413);
             transition: background-color 0.9s ease;
             
             cursor: pointer;
@@ -74,13 +75,13 @@
 
         .icone {
             position: relative;
-            top: 0.5vh;
-            left: 0.5vh;
+            top: -0.4vh;
+            left: -0.4vh;
 
             border-style: hidden;
-            width: 6vh;
-            height: 6vh;
-            opacity: 0.6;
+            width: 10vh;
+            height: 10vh;
+            opacity: 0.8;
         }
     </style>
 </head>
