@@ -81,36 +81,39 @@
         ?>
 
         <div id="editForm" style="display:none;">
-         <form action="./scripts/modif_profil.php" method="post">
-             <label for="pseudo">Pseudo :</label><br>
-            <input type="text" id="pseudo" name="pseudo" maxlength="15" required><br>
+        <form action="./scripts/modif_profil.php" method="post" enctype="multipart/form-data">
+    <label for="pseudo">Pseudo :</label><br>
+    <input type="text" id="pseudo" name="pseudo" maxlength="15" required><br>
 
-              <label for="prenom">Prénom :</label><br>
-             <input type="text" id="prenom" name="prenom"><br>
+    <label for="prenom">Prénom :</label><br>
+    <input type="text" id="prenom" name="prenom"><br>
 
-             <label for="nom">Nom :</label><br>
-             <input type="text" id="nom" name="nom"><br>
+    <label for="nom">Nom :</label><br>
+    <input type="text" id="nom" name="nom"><br>
 
-             <label for="email">Adresse email :</label><br>
-             <input type="email" id="email" name="email" required><br>
+    <label for="email">Adresse email :</label><br>
+    <input type="email" id="email" name="email" required><br>
 
-             <label for="motdepasse">Mot de passe :</label><br>
-             <input type="password" id="motdepasse" name="motdepasse" required><br>
+    <label for="motdepasse">Mot de passe :</label><br>
+    <input type="password" id="motdepasse" name="motdepasse" required><br>
 
-             <label for="datenaissance">Date de naissance :</label><br>
-             <input type="date" id="datenaissance" name="datenaissance" required><br>
+    <label for="datenaissance">Date de naissance :</label><br>
+    <input type="date" id="datenaissance" name="datenaissance" required><br>
 
-             <label for="genre">Genre :</label><br>
-                <select id="genre" name="genre" required>
-                    <option value="homme">Homme</option>
-                    <option value="femme">Femme</option>
-                    <option value="autre">Autre</option>
-                </select><br>
+    <label for="genre">Genre :</label><br>
+    <select id="genre" name="genre" required>
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+        <option value="autre">Autre</option>
+    </select><br>
 
-             <label for="biographie">Biographie (max. 3000 caractères) :</label><br>
+    <label for="biographie">Biographie (max. 3000 caractères) :</label><br>
+    <textarea id="biographie" name="biographie" rows="5" maxlength="3000"></textarea><br>
 
-            <textarea id="biographie" name="biographie" rows="5" maxlength="3000"></textarea><br>
-            <input type="submit" value="Enregistrer les modifications">
+    <label for="photo">Photo de profil :</label><br>
+    <input type="file" id="photo" name="photo"><br> <!-- Champ pour télécharger la photo -->
+
+    <input type="submit" value="Enregistrer les modifications">
 </form>
         </div>
 
