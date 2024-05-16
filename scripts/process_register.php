@@ -81,6 +81,10 @@
         $file = fopen("../data/profils/".$pseudo."/notifs.csv", "w");
         fwrite($file,   "PSEUDO;NB_VISITE;\n");
         fclose($file);
+
+        $file = fopen("../data/profils/".$pseudo."/bio.csv", "w");
+        fwrite($file,   "Votre Biographie ici!;\n");
+        fclose($file);
     }
 
 
