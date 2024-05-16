@@ -126,7 +126,7 @@ if (!empty($resultats)) {
 
         
         // Affichage du profil trouvé
-        echo    '<li class="recherche" onclick="link()">'
+        echo    '<li class="recherche" onclick="link(); envoyerNotif()">'
                     .'<img class="recherche" src="' . $resultat['lien_photo'] . '" alt="Photo de profil">'
                     .'<span class="recherche">' . $resultat['pseudo'] . '</span>'
                .'</li>';
@@ -140,3 +140,27 @@ else{
 }
 
 ?>
+
+<script>
+    function envoyerNotif() {
+    // Récupération de la valeur de pseudo
+    var pseudo = encodeURIComponent('<?php echo isset($_GET['pseudo']) ? $_GET['pseudo'] : ''; ?>');
+
+    var xhr = new XMLHttpRequest();
+    var params = 'pseudo=' + pseudo;
+
+    xhr.open('GET', 'add_notifs_3.php?' + params, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                // La requête a réussi, traiter la réponse si nécessaire
+                console.log(xhr.responseText);
+            } else {
+                // La requête a échoué
+                console.error('La requête a échoué avec le statut ' + xhr.status);
+            }
+        }
+    };
+}
+</script>
