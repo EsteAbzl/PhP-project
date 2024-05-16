@@ -44,22 +44,27 @@ $recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
 $resultats = rechercherProfils($recherche);
 
 // modif hauteur de la liste en fonct° de nbr de résultats
-$hauteurListe = count($resultats) * 20 + 10; 
+$hauteurListe = count($resultats) * 14 + 5; 
 
 ?>
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         div.main {
             position: absolute; 
             top: 20vh;
             left: 25vw;
 
             width: 70vw;
-            height:<?php echo $hauteurListe; ?>vh;
+            height:<?php echo $hauteurListe; ?>vw;
 
-            //overflow-y: hidden; 
+            overflow: hidden; 
             margin: 0;
-            background-color: none;
+            background-color: transparent;
 
+            font-family: 'quicksand', sans-serif;
             font-size: 3vw;
             text-align: left;
         }
