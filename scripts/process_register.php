@@ -50,6 +50,8 @@
                 window.alert(\"Création du profil..\");
             </script>";
 
+        $endline = ";                    \n"; // 20 espaces
+
         $file = fopen("../data/profil_list.csv", "a");
         fwrite($file, '['.$pseudo."]\n");
         fclose($file);
@@ -57,13 +59,13 @@
         mkdir("../data/profils/".$pseudo);
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "w");
         fwrite($file,   "ELEMENT;VALEUR;\n"
-                        ."perm;1;\n"
-                        ."mdp;".$_POST['motdepasse'].";\n"
-                        ."nom;".$_POST['nom'].";\n"
-                        ."prenom;".$_POST['prenom'].";\n"
-                        ."date_naissance;".$_POST['datenaissance'].";\n"
-                        ."mail;".$_POST['email'].";\n"
-                        ."genre;".$_POST['genre'].";\n");
+                        ."perm;1".$endline
+                        ."mdp;".$_POST['motdepasse'].$endline
+                        ."nom;".$_POST['nom'].$endline
+                        ."prenom;".$_POST['prenom'].$endline
+                        ."date_naissance;".$_POST['datenaissance'].$endline
+                        ."mail;".$_POST['email'].$endline
+                        ."genre;".$_POST['genre'].$endline);
         fclose($file);
 
         $file = fopen("../data/profils/".$pseudo."/visiteurs.csv", "w");
@@ -85,6 +87,12 @@
         $file = fopen("../data/profils/".$pseudo."/bio.csv", "w");
         fwrite($file,   "Votre Biographie ici!;\n");
         fclose($file);
+
+        echo "<script>
+                window.alert(\"Le profil '".$pseudo."' a été créé avec succès.\n
+                                Veuillez maintenent vous connecter.\");
+            </script>";
+
     }
 
 
