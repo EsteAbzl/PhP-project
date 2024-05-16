@@ -119,14 +119,14 @@ if (!empty($resultats)) {
     foreach ($resultats as $resultat) {
         // Creation du lien vers le profil
         echo    '<script>
-                    function link(){
+                    function linkTo_'.$resultat['pseudo'].'(){
                         location.href="./show_profil.php?pseudo='.$resultat['pseudo'].'";
                     }
                 </script>';
 
         
         // Affichage du profil trouvé
-        echo    '<li class="recherche" onclick="link(); envoyerNotif()">'
+        echo    '<li class="recherche" onclick="linkTo_'.$resultat['pseudo'].'(); envoyerNotif()">'
                     .'<img class="recherche" src="' . $resultat['lien_photo'] . '" alt="Photo de profil">'
                     .'<span class="recherche">' . $resultat['pseudo'] . '</span>'
                .'</li>';
