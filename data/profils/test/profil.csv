@@ -1,8 +1,8 @@
 ELEMENT;VALEUR;
 perm;1;
 mdp;test;
-nom;;
-prenom;;
+nom;a;
+prenom;a;
 date_naissance;0001-01-01;
-mail;test@gmail.commmmmm;
+mail;caca@gmail.com;
 genre;homme;
