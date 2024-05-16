@@ -180,15 +180,38 @@
             <div class="subscription-option">
                 <h2><strong>Abonnement mensuel</strong></h2>
                 <p style="font-family: 'DM Sans', sans-serif; font-size: 50px;"><strong>5,99€  /mois</strong></p>
-                <button class="bouton" onclick="showNotification()">Souscrire</button>
+                <button class="bouton" onclick="showNotification(); envoyerNotif()">Souscrire</button>
                 
             </div>
             <div style="background-color: #FEB5F8;"class="subscription-option">
                 <h2>Abonnement annuel</h2>
                 <p style="font-family: 'DM Sans', sans-serif; font-size: 50px;"><strong>71,88 €  /an</strong></p>
-                <button class="bouton" onclick="showNotification()">Souscrire</button>
+                <button class="bouton" onclick="showNotification(); envoyerNotif()">Souscrire</button>
             </div>
         </div>
+
+        <script>
+            function envoyerNotif() {
+    // Récupération de la valeur de pseudo
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'add_notifs_4.php', true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                // La requête a réussi, traiter la réponse si nécessaire
+                console.log(xhr.responseText);
+            } else {
+                // La requête a échoué
+                console.error('La requête a échoué avec le statut ' + xhr.status);
+            }
+        }
+    };
+}
+        </script>
+
 
         <br>
         <br>

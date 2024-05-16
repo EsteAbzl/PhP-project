@@ -2,7 +2,6 @@
 <?php
 include 'scripts/check_session.php';
 include 'template.php';
-include 'add_notifs.php';
 
 ?>
 <html>
@@ -130,17 +129,43 @@ function afficherDiscussion() {
     <?php afficherDiscussion(); ?>
 </div>
 
+
 <div id="chat-bar">
     <form id="message-form" autocomplete ="off" onsubmit="envoyerMessage(event)">
         <input type="hidden" name="id_discussion" value="<?php echo isset($_GET['id']) ? $_GET['id'] : ''; ?>">
         <input type="hidden" name="pseudo" value="<?php echo isset($_SESSION['pseudo']) ? $_SESSION['pseudo'] : ''; ?>">
         <input type="hidden" name="lien_photo" value="data/profils/<?php echo isset($_SESSION['profil']) ? $_SESSION['profil'] : ''; ?>/pfp.jpg">
         <input type="text" name="message" id="message" maxlength="300" placeholder="Envoyez un message">
-        <button onclick="addNotification1($_GET['pseudo'])" type="submit">Envoyer</button>
+        <button onclick="envoyerNotif()"  type="submit">Envoyer</button>
     </form>
 </div>
 
 <script>
+
+function envoyerNotif() {
+    // Récupération de la valeur de pseudo
+    var pseudo = encodeURIComponent('<?php echo isset($_GET['pseudo']) ? $_GET['pseudo'] : ''; ?>');
+
+    var xhr = new XMLHttpRequest();
+    var params = 'pseudo=' + pseudo;
+
+    xhr.open('GET', 'add_notifs_1.php?' + params, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                // La requête a réussi, traiter la réponse si nécessaire
+                console.log(xhr.responseText);
+            } else {
+                // La requête a échoué
+                console.error('La requête a échoué avec le statut ' + xhr.status);
+            }
+        }
+    };
+}
+
+
+
     function envoyerMessage(event) {
         event.preventDefault(); // Empêcher le formulaire de se soumettre normalement
 
