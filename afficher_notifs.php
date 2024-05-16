@@ -9,9 +9,10 @@ function ListeNotif() {
     if (($dossier = fopen($chemin_fichier, "r")) !== FALSE) {
 
         while (($data = fgetcsv($dossier, 1000, ";")) !== FALSE) {
+            $ps = $data[1];
             $resultats[] = array(
                 'type' => $data[0],
-                'lien_photo' => "data/profils/" . $_SESSION['pseudo'] . "/pfp.jpg",
+                'lien_photo' => "data/profils/" . $ps . "/pfp.jpg",
                 'date' => $data[2], 
                 'message' => $data[3] 
             );
