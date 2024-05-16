@@ -101,7 +101,7 @@
                 <form id="login" action="./scripts/process_login.php" method="POST">
                     
                     <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 100px; margin-left:330px;" for="pseudo">Pseudo :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="text" id="pseudo" name="pseudo" required><br>
+                    <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="text" id="pseudo" name="pseudo" maxlength="15" required><br>
 
                     <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 300px; margin-left: 330px;" for="motdepasse">Mot de passe :</label><br>
                     <input style="height: 35px; font-size: 25px; width: 700px; margin-left:100px; margin-top: 20px; border-radius: 15px; " type="password" id="motdepasse" name="motdepasse" required><br>
