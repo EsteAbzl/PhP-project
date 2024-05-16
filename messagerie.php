@@ -35,7 +35,7 @@ if (!empty($resultats)) {
     echo '<ul style="list-style: none; padding: 0;">'; 
     foreach ($resultats as $resultat) {
         echo '<li style="margin-bottom: 10px; border: 2px solid lightgrey; padding: 10px;">'; 
-        echo '<a href="show_discussion.php?id='.$resultat['id_discussion'].'" style="text-decoration: none;">';
+        echo '<a href="show_discussion.php?id=' . $resultat['id_discussion'] . '&pseudo=' . $resultat['pseudo'] . '" style="text-decoration: none;">';
         echo '<button style="border: none; background: none; display: flex; align-items: center;">';
         echo '<img src="' . $resultat['lien_photo'] . '" alt="Photo de profil" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">';
         echo '<span style="font-weight: bold; font-size: 18px; font-family: \'Quicksand\', sans-serif;">' . $resultat['pseudo'] . '</span>';
