@@ -98,7 +98,7 @@
                 
                 <form id="registration" action="./scripts/process_register.php" method="POST">
                 <label style="color: white; font-size: 30px; font-family:'quicksand';margin-top: 20px; margin-left:250px;" for="pseudo">Pseudo :</label><br>
-                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px; margin-left:250px;" type="text" id="pseudo" name="pseudo" required><br>
+                    <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px; margin-left:250px;" type="text" id="pseudo" name="pseudo" maxlength="15" required><br>
 
                     <label style="color: white; font-size: 30px; font-family:'quicksand'; margin-top: 20px;margin-left:250px;" for="prenom">Prénom :</label><br>
                     <input style="height: 35px; font-size: 25px; width: 400px; border-radius: 15px;margin-left:250px;" type="text" id="prenom" name="prenom"><br>

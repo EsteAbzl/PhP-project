@@ -96,6 +96,31 @@
             height: 2.5vw;
             opacity: 0.6;
         }
+
+        .profil {
+            margin-left: 15%;
+            box-sizing: border-box;
+            
+            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
+            background-color: none;
+            transition: background-color 0.3s ease;
+            
+            font-size: 3vw;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .pfp {
+            position: relative;
+            top: 0.3vw;
+            left: 0vw;
+
+            border: 0.25vw solid rgba(102, 64, 150, 0.424);
+
+            width: 2.5vw;
+            height: 2.5vw;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -108,6 +133,11 @@
         <div class="logo">
             <img src="./icones/046-envato.png" alt="Icône" class="image">Dater
         </div>
+
+        <div class="profil">
+            <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.jpg"'; ?> alt="Icône" class="pfp">Profil
+        </div>
+
         <div class="boutons">
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
             <a href="page_recherche.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>

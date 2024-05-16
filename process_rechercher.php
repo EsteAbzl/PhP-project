@@ -48,14 +48,6 @@ $hauteurListe = count($resultats) * 20 + 10;
 
 ?>
     <style>
-        button.recherche{
-            cursor: pointer;
-            border: none; 
-            background: none; 
-            display: flex; 
-            align-items: center;
-        }
-
         div.main {
             position: absolute; 
             top: 20vh;
@@ -64,11 +56,11 @@ $hauteurListe = count($resultats) * 20 + 10;
             width: 70vw;
             height:<?php echo $hauteurListe; ?>vh;
 
-            overflow-y: hidden; 
+            //overflow-y: hidden; 
             margin: 0;
             background-color: none;
 
-            font-size: 5vh;
+            font-size: 3vw;
             text-align: left;
         }
 
@@ -79,16 +71,16 @@ $hauteurListe = count($resultats) * 20 + 10;
 
         li.recherche{
             position: relative;
-            width: 50vw;
-            height: 15vh;
+            width: 53vw;
+            height: 10vw;
 
             padding-left: 2vw;
-            margin-left: 5vh;
-            margin-bottom: 5vh; // distance entre chaque profils 
+            margin-left: 5vw;
+            margin-bottom: 3vw; // distance entre chaque profils 
 
             border-color: black;
             border-style: solid;
-            border-radius: 1vh;
+            border-radius: 1vw;
             box-shadow: 0 0 2vh 1vh #6be8b470;
             background: linear-gradient(#6be8b49d, #d44fae80); 
             
@@ -98,16 +90,17 @@ $hauteurListe = count($resultats) * 20 + 10;
         }
 
         img.recherche{
-            width: 11vh; 
-            height: 11vh; 
-            margin-right: 10vh;
+            width: 9vw;
+            min-width: 9vw; 
+            height: 9vw; 
+            margin-right: 4vw;
             
             border-radius: 50%; 
         }
 
         span.recherche{
             font-family: 'quicksand', sans-serif;
-            font-size: 6vh;
+            font-size: 4vw;
             font-weight: bold;
         }
     </style>
@@ -119,6 +112,7 @@ if (!empty($resultats)) {
             .'<ul class="recherche">'; 
 
     foreach ($resultats as $resultat) {
+        // Creation du lien vers le profil
         echo    '<script>
                     function link(){
                         location.href="./show_profil.php?pseudo='.$resultat['pseudo'].'";
@@ -126,13 +120,14 @@ if (!empty($resultats)) {
                 </script>';
 
         
+        // Affichage du profil trouvé
         echo    '<li class="recherche" onclick="link()">'
                     .'<img class="recherche" src="' . $resultat['lien_photo'] . '" alt="Photo de profil">'
                     .'<span class="recherche">' . $resultat['pseudo'] . '</span>'
                .'</li>';
     }
-    echo '</ul>';
-    echo '</div>'; 
+    echo    '</ul>'
+        .'</div>'; 
 
 }
 else{
