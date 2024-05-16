@@ -141,7 +141,7 @@
         <div class="boutons">
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
             <a href="page_recherche.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
-            <a href="notif.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Notifications</a>
+            <a href="afficher_notifs.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Notifications</a>
             <a href="messagerie.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a href="profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
             <a href="premium.php" class="bouton"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
