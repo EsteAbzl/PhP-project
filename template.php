@@ -152,7 +152,7 @@
             }
         </script>
 
-        <div class="profil" ondbclick="link_profil()">
+        <div class="profil" onclick="link_profil()">
             <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.jpg"'; ?> alt="Icône" class="pfp"><?php echo $_SESSION['pseudo']; ?>
         </div>
 
