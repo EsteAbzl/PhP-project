@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
 include 'scripts/check_session.php';
-include 'template.php'
+include 'template.php';
+include 'add_notifs.php';
 
 ?>
 <html>
@@ -135,7 +136,7 @@ function afficherDiscussion() {
         <input type="hidden" name="pseudo" value="<?php echo isset($_SESSION['pseudo']) ? $_SESSION['pseudo'] : ''; ?>">
         <input type="hidden" name="lien_photo" value="data/profils/<?php echo isset($_SESSION['profil']) ? $_SESSION['profil'] : ''; ?>/pfp.jpg">
         <input type="text" name="message" id="message" maxlength="300" placeholder="Envoyez un message">
-        <button type="submit">Envoyer</button>
+        <button onclick="addNotification1($_GET['pseudo'])" type="submit">Envoyer</button>
     </form>
 </div>
 
