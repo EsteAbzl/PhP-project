@@ -58,9 +58,45 @@
         }
 
 
+
+
+        .profil {
+            margin-top: 0.3vw;
+            margin-left: 18%;
+            box-sizing: border-box;
+            width: 80%;
+            
+            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
+            background-color: transparent;
+            cursor: pointer;
+            
+            font-family: 'against.projet';
+            font-size: 2vw;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .pfp {
+            position: relative;
+            top: 0.5vw;
+            left: 0vw;
+            width: 2.5vw;
+            height: 2.5vw;
+            margin-right: 1vw;
+
+            border: 0.25vw solid rgba(102, 64, 150, 0.424);
+            border-radius: 2vw;
+
+            opacity: 1;
+        }
+
+
+
+
         .boutons {
             display: flex;
             flex-direction: column;
+            margin-top: 1vw;
         }
 
         .bouton {
@@ -97,30 +133,6 @@
             opacity: 0.6;
         }
 
-        .profil {
-            margin-left: 15%;
-            box-sizing: border-box;
-            
-            color: black;                 /* Couleur du bouton à modifier en fonction de DA */
-            background-color: none;
-            transition: background-color 0.3s ease;
-            
-            font-size: 3vw;
-            text-align: left;
-            text-decoration: none;
-        }
-
-        .pfp {
-            position: relative;
-            top: 0.3vw;
-            left: 0vw;
-
-            border: 0.25vw solid rgba(102, 64, 150, 0.424);
-
-            width: 2.5vw;
-            height: 2.5vw;
-            opacity: 1;
-        }
     </style>
 </head>
 
@@ -134,8 +146,14 @@
             <img src="./icones/046-envato.png" alt="Icône" class="image">Dater
         </div>
 
-        <div class="profil">
-            <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.jpg"'; ?> alt="Icône" class="pfp">Profil
+        <script>
+            function link_profil(){
+                location.href="./show_profil.php?pseudo=<?php echo $_SESSION['pseudo']; ?>";
+            }
+        </script>
+
+        <div class="profil" ondbclick="link_profil()">
+            <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.jpg"'; ?> alt="Icône" class="pfp"><?php echo $_SESSION['pseudo']; ?>
         </div>
 
         <div class="boutons">
