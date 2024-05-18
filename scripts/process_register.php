@@ -68,14 +68,6 @@
                         ."genre;".$_POST['genre'].$endline);
         fclose($file);
 
-        $file = fopen("../data/profils/".$pseudo."/visiteurs.csv", "w");
-        fwrite($file,   "PSEUDO;NB_VISITE;\n");
-        fclose($file);
-
-        $file = fopen("../data/profils/".$pseudo."/discussion.csv", "w");
-        fwrite($file,   "PSEUDO;ID_DISCUSSION;\n");
-        fclose($file);
-
         $file = fopen("../data/profils/".$pseudo."/contacts.csv", "w");
         fwrite($file,   "PSEUDO;NB_VISITE;\n");
         fclose($file);
