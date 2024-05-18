@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function() {
 
     var animationEnCours = false;

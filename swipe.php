@@ -1,3 +1,9 @@
+<?php
+        include 'scripts/check_session.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -34,10 +40,6 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 }
 
-.demo__header {
-  height: 6rem;
-  background: #002942;
-}
 
 .demo__content {
   overflow: hidden;
@@ -218,7 +220,6 @@ body {
 </head>
 <body>
   <div class="demo">
-    <header class="demo__header"></header>
     <div class="demo__content">
       <div class="demo__profile-cont">
         <div class="demo__profile">
