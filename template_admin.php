@@ -1,7 +1,8 @@
-<!-- 
-    Page copié au début de pages
-    Contient les liens vers les différentes pages du site 
--->
+<?php 
+
+include 'scripts/check_session.php';
+
+?>
 
 
 <!DOCTYPE html>
@@ -157,10 +158,12 @@
         </div>
 
         <div class="boutons">
-            <a href="" class="bouton"><img src="./icones/home.png" alt="Icône" class="image"></a>
-            <a href="#" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Rechercher une discussion</a>
+            <a href="template_admin.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
+            <a href="admin_ban.php" class="bouton"><img src="./icones/006-cross.png" alt="Icône" class="image">Bannir</a>
+            <a href="admin_discussion.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Discussion ID</a>
             <a href="afficher_signalements.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Signalements</a>
-            <a href="#" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Blacklisted</a>
+            <a href="admin_blacklisted.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Blacklisted</a>
+            <a href="admin_modif.php" class="bouton"><img src="./icones/paramètre.png" alt="Icône" class="image">Modifier INFOS</a>
         </div>
 
     </div>
