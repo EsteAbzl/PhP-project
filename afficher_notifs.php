@@ -52,3 +52,8 @@ if (!empty($resultats)) {
     echo 'Aucun résultat trouvé.';
 }
 ?>
+
+<!-- Bouton "Effacer" aligné à gauche -->
+<form id="deleteNotifsForm" action="scripts/delete_notifs.php" method="post" style="text-align: right; margin-left: 10px;">
+    <input type="submit" name="deleteNotifs" value="Effacer" style="border: 2px solid red; background-color: white; color: red; padding: 10px; font-size: 16px; cursor: pointer;">
+</form>
