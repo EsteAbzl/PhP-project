@@ -114,6 +114,15 @@ function afficherDiscussion() {
             echo '<div class="pseudo">' . $message['sender'] . '</div>';
             echo '<div class="message-text" >' . $message['message'] . '</div>';
             echo '<div class="timestamp"><small>' . $message['timestamp'] . '</small></div>';
+
+
+            echo '<form action="signalement.php" method="post">';
+            echo '<input type="hidden" name="sender" value="' . $message['sender'] . '">';
+            echo '<input type="hidden" name="message" value="' . $message['message'] . '">';
+            echo '<input type="hidden" name="timestamp" value="' . $message['timestamp'] . '">';
+            echo '<input type="hidden" name="id" value="' . $id_discussion . '">';
+            echo '<button type="submit" name="report" style="background-color: red; color: white;">Signaler</button>';
+            echo '</form>';
             echo '</div>';
             echo '</div>';
         }
