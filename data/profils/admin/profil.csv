@@ -1,0 +1,8 @@
+ELEMENT;VALEUR;
+perm;3;                    
+mdp;admin;                    
+nom;a;                    
+prenom;a;                    
+date_naissance;0001-01-01;                    
+mail;admin@gmail.com;                    
+genre;homme;                    
