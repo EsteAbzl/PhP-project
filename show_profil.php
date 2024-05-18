@@ -76,7 +76,7 @@
                     echo "<textarea class='bio' readonly>$bio_data</textarea>";
                 }
 
-                echo "<button onclick='envoyerNotif(); AjoutContact();'>S'abonner</button>";
+                echo "<button onclick='AjoutContact();'>S'abonner</button>";
 
             } else {
                 echo "Paramètres manquants dans l'URL.";
