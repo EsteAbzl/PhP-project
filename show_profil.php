@@ -76,7 +76,7 @@
                     echo "<textarea class='bio' readonly>$bio_data</textarea>";
                 }
 
-                echo "<button onclick=''>S'abonner</button>";
+                echo "<button onclick='envoyerNotif(); AjoutContact();'>S'abonner</button>";
 
             } else {
                 echo "Paramètres manquants dans l'URL.";
@@ -86,5 +86,53 @@
         </div>
 
     </div>
+
+    <script>
+        function AjoutContact() {
+    // Récupération de la valeur de pseudo
+    var pseudo = encodeURIComponent('<?php echo isset($_GET['pseudo']) ? $_GET['pseudo'] : ''; ?>');
+
+    var xhr = new XMLHttpRequest();
+    var params = 'pseudo=' + pseudo;
+
+    xhr.open('GET', 'sabo.php?' + params, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                // La requête a réussi, traiter la réponse si nécessaire
+                console.log(xhr.responseText);
+            } else {
+                // La requête a échoué
+                console.error('La requête a échoué avec le statut ' + xhr.status);
+            }
+        }
+    };
+}
+
+    function envoyerNotif() {
+    // Récupération de la valeur de pseudo
+    var pseudo = encodeURIComponent('<?php echo isset($_GET['pseudo']) ? $_GET['pseudo'] : ''; ?>');
+
+    var xhr = new XMLHttpRequest();
+    var params = 'pseudo=' + pseudo;
+
+    xhr.open('GET', 'add_notifs_2.php?' + params, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                // La requête a réussi, traiter la réponse si nécessaire
+                console.log(xhr.responseText);
+            } else {
+                // La requête a échoué
+                console.error('La requête a échoué avec le statut ' + xhr.status);
+            }
+        }
+    };
+}
+</script>
+
+
 </body>
 </html>
