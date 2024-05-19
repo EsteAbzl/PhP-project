@@ -45,18 +45,44 @@ Puis contacter Paul pour qu'il vous lance le site (cf. contact)
 
 ## Utilisation
 
--Experience utilisateur :  
+###Experience utilisateur :  
 
+1. **Création d'un Compte** :
+   - Les utilisateurs peuvent s'inscrire en fournissant leurs informations de base (nom, email, mot de passe, etc.).
+   - Après inscription, ils peuvent compléter leur profil avec des détails supplémentaires comme une photo de profil, une bio, et des critères de recherche.
 
--Super-utilisateur :  
+2. **Navigation et Correspondance** :
+   - Les utilisateurs peuvent parcourir les profils en utilisant une interface de type "swipe" :
+     - **Swipe droite** pour indiquer un intérêt.
+     - **Swipe gauche** pour passer.
+   - Les utilisateurs peuvent également utiliser des filtres de recherche pour affiner leurs résultats en fonction de critères comme l'âge, les intérêts, etc.
 
+3. **Messagerie** :
+   - Une fois une correspondance établie (quand deux utilisateurs montrent de l'intérêt l'un pour l'autre), ils peuvent échanger des messages.
+   - La messagerie est en temps réel et permet de partager des messages textes et des images.
+
+4. **Abonnements** :
+   - Les utilisateurs peuvent choisir parmi différents niveaux d'abonnement.
+   - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité leur profil, et des options de messagerie supplémentaires.
+   - Les utilisateurs féminins bénéficient d'un accès gratuit aux fonctionnalités de base du site.
+
+###Super-utilisateur :  
+
+Pour accéder aux fonctionnalités administratives, utilisez les identifiants suivants :
+- **Nom d'utilisateur** : admin
+- **Mot de passe** : admin
+
+Avec ce compte, vous pouvez :
+- Gérer les utilisateurs (ajouter, supprimer, modifier des comptes).
+- Superviser les données stockées dans les fichiers.
+- Gérer les abonnements et les accès aux fonctionnalités.
 
 ## Contact
 
 Membres de l'équipe :
 
-- Estéban - quoicoubeh@gmail.com
-- Paul - quoicoubeh@gmail.com
-- Ilan - quoicoubeh@gmail.com
-- Zachary - quoicoubeh@gmail.com
+- Estéban - [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- Paul -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- Ilan -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- Zachary -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 
