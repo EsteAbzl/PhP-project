@@ -30,7 +30,7 @@ Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonc
 
 ## Installation
 
-
+Télécharger le fichier .zip depuis la fenêtre
 
 ## Utilisation
 
