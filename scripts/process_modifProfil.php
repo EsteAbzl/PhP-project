@@ -65,20 +65,20 @@ if (file_exists($pfp_path)) {
 if ($_FILES['photo']['error'] === UPLOAD_ERR_OK) {
 
     $temp_file = $_FILES['photo']['tmp_name'];
-    $new_pfp_path = $profil_dir . "/pfp.jpg";
+    $new_pfp_path = $profil_dir . "/pfp.png";
 
 
 
     if (move_uploaded_file($temp_file, $new_pfp_path)) {
-        echo "La photo de profil a été mise à jour avec succès.";
+        echo "<script>window.alert('La photo de profil a été mise à jour avec succès.')</script>";
 
     } else {
 
-        echo "Une erreur est survenue lors du téléchargement de la nouvelle photo de profil.";
+        echo "<script>window.alert('Une erreur est survenue lors du téléchargement de la nouvelle photo de profil.')</script>";
     }
 } else {
     
-    echo "Une erreur est survenue lors de la réception de la nouvelle photo de profil.";
+    echo "<script>window.alert('Une erreur est survenue lors de la réception de la nouvelle photo de profil.')</script>";
 }
 
 $nouveauChemin = "../data/profils/" . $new_pseudo;

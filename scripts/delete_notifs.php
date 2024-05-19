@@ -11,7 +11,7 @@ function resetNotificationsFile() {
     // Supprimer le fichier s'il existe
     if (file_exists($filePath)) {
         if (!unlink($filePath)) {
-            echo "Impossible de supprimer le fichier notifs.csv existant.";
+            echo "<script>widow.alert(\"Impossible de supprimer le fichier notifs.csv existant.\");</script>";
             return;
         }
     }
@@ -19,7 +19,7 @@ function resetNotificationsFile() {
     // Créer le fichier notifs.csv
     file_put_contents($filePath, '');
 
-    echo "Le fichier notifs.csv a été réinitialisé avec succès.";
+    echo "<script>widow.alert(\"Le fichier notifs.csv a été réinitialisé avec succès.\");</script>";
     echo "<script>location.href=\"../afficher_notifs.php\";</script>";
     exit;
 }

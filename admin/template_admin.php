@@ -1,6 +1,13 @@
 <?php 
+    session_start();
+    if(!isset($_SESSION['perm']) || $_SESSION['perm'] < 3){
 
-include 'scripts/check_session.php';
+        echo "  <script>
+                        widow.alert(\"Vous n'avez pas les permissions pour acceder à cette page.\")
+                    </script>";
+        
+        echo '<script>location.href="../accueil.php";</script>'; // note: l'accueil initialise la session si elle n'existe pas encore
+    }
 
 ?>
 
@@ -12,12 +19,12 @@ include 'scripts/check_session.php';
         
         @font-face {
             font-family: 'against.projet';
-            src: url('./fonts/against regular.otf') format('opentype'); 
+            src: url('../fonts/against regular.otf') format('opentype'); 
         }
 
         @font-face {
             font-family: 'quicksand';
-            src: url('./fonts/Quicksand_Light.otf') format('opentype');
+            src: url('../fonts/Quicksand_Light.otf') format('opentype');
         }
         
         body{
@@ -80,17 +87,16 @@ include 'scripts/check_session.php';
         .pfp {
             position: relative;
             top: 0.5vw;
-            left: 0vw;
-            width: 2.5vw;
-            height: 2.5vw;
-            margin-right: 1vw;
+            right: 1vw;
+            width: 4vw;
+            height: 4vw;
+            margin-right: 0vw;
 
             border: 0.25vw solid rgba(102, 64, 150, 0.424);
-            border-radius: 2vw;
+            border-radius: 4vw;
 
             opacity: 1;
         }
-
 
 
 
@@ -144,26 +150,26 @@ include 'scripts/check_session.php';
     
     <div class="sommaire">
         <div class="logo">
-            <img src="./icones/046-envato.png" alt="Icône" class="image">Dater
+            <img src="../icones/046-envato.png" alt="Icône" class="image">Dater
         </div>
 
         <script>
             function link_profil(){
-                location.href="./show_profil.php?pseudo=<?php echo $_SESSION['pseudo']; ?>";
+                location.href="my_profil.php";
             }
         </script>
 
         <div class="profil" onclick="link_profil()">
-            <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.jpg"'; ?> alt="Icône" class="pfp"><?php echo $_SESSION['pseudo']; ?>
+            <img src=<?php echo '"../data/profils/'.$_SESSION['pseudo'].'/pfp.png"'; ?> alt="PfP" class="pfp"><?php echo $_SESSION['pseudo']; ?>
         </div>
 
         <div class="boutons">
-            <a href="template_admin.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
-            <a href="admin_ban.php" class="bouton"><img src="./icones/006-cross.png" alt="Icône" class="image">Bannir</a>
-            <a href="admin_discussion.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Discussion ID</a>
-            <a href="afficher_signalements.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Signalements</a>
-            <a href="admin_blacklisted.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Blacklisted</a>
-            <a href="admin_modif.php" class="bouton"><img src="./icones/paramètre.png" alt="Icône" class="image">Modifier INFOS</a>
+            <a href="../homepage.php" class="bouton"><img src="../icones/home.png" alt="Icône" class="image">Accueil</a>
+            <a href="admin_ban.php" class="bouton"><img src="../icones/006-cross.png" alt="Icône" class="image">Bannir</a>
+            <a href="admin_discussion.php" class="bouton"><img src="../icones/026-search.png" alt="Icône" class="image">Discussion ID</a>
+            <a href="afficher_signalements.php" class="bouton"><img src="../icones/043-warning.png" alt="Icône" class="image">Signalements</a>
+            <a href="admin_blacklisted.php" class="bouton"><img src="../icones/profil.png" alt="Icône" class="image">Blacklisted</a>
+            <a href="admin_modif.php" class="bouton"><img src="../icones/paramètre.png" alt="Icône" class="image">Modifier INFOS</a>
         </div>
 
     </div>

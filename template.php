@@ -79,13 +79,13 @@
         .pfp {
             position: relative;
             top: 0.5vw;
-            left: 0vw;
-            width: 2.5vw;
-            height: 2.5vw;
-            margin-right: 1vw;
+            right: 1vw;
+            width: 4vw;
+            height: 4vw;
+            margin-right: 0vw;
 
             border: 0.25vw solid rgba(102, 64, 150, 0.424);
-            border-radius: 2vw;
+            border-radius: 4vw;
 
             opacity: 1;
         }
@@ -148,17 +148,21 @@
 
         <script>
             function link_profil(){
-                location.href="./show_profil.php?pseudo=<?php echo $_SESSION['pseudo']; ?>";
+                location.href="my_profil.php";
             }
         </script>
 
         <div class="profil" onclick="link_profil()">
-            <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.jpg"'; ?> alt="Icône" class="pfp"><?php echo $_SESSION['pseudo']; ?>
+            <img src=<?php echo '"data/profils/'.$_SESSION['pseudo'].'/pfp.png"'; ?> alt="PfP" class="pfp"><?php echo $_SESSION['pseudo']; ?>
         </div>
 
         <div class="boutons">
+            <?php if($_SESSION['perm'] == "3"){
+                echo "<a href=\"admin/template_admin.php\" class=\"bouton\" style=\"background-color: #fdbc2c; text-align: center; padding-bottom: 2%\">Modération</a>";
+            }?>
+
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
-            <a href="page_recherche.php" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
+            <a href="process_rechercher.php?recherche=" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
             <a href="afficher_notifs.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Notifications</a>
             <a href="messagerie.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a href="my_profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
