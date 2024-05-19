@@ -30,7 +30,8 @@ Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonc
 
 ## Installation
 
-Télécharger le fichier .zip depuis le bouton Code, puis Download Zip
+Télécharger le fichier .zip depuis le bouton Code, puis Download Zip  
+
 -Sous Linux :
 
 Une fois le .zip téléchargé, y ouvrir terminal de commande  
@@ -45,7 +46,7 @@ Puis contacter Paul pour qu'il vous lance le site (cf. contact)
 
 ## Utilisation
 
-###Experience utilisateur :  
+### Experience utilisateur :  
 
 1. **Création d'un Compte** :
    - Les utilisateurs peuvent s'inscrire en fournissant leurs informations de base (nom, email, mot de passe, etc.).
@@ -66,7 +67,7 @@ Puis contacter Paul pour qu'il vous lance le site (cf. contact)
    - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité leur profil, et des options de messagerie supplémentaires.
    - Les utilisateurs féminins bénéficient d'un accès gratuit aux fonctionnalités de base du site.
 
-###Super-utilisateur :  
+### Super-utilisateur :  
 
 Pour accéder aux fonctionnalités administratives, utilisez les identifiants suivants :
 - **Nom d'utilisateur** : admin
