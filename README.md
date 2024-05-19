@@ -31,9 +31,6 @@ Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonc
 ## Installation
 
 Télécharger le fichier .zip depuis le bouton Code, puis Download Zip
-
-## Utilisation
-
 -Sous Linux :
 
 Une fois le .zip téléchargé, y ouvrir terminal de commande  
@@ -44,7 +41,15 @@ Par exemple : localhost:8080/accueil.php
 -Sous windows :
 
 Une fois le .zip téléchargé, installer Wampserveur  
-Puis contacter Paul pour vous lance le site (cf. contact)
+Puis contacter Paul pour qu'il vous lance le site (cf. contact)
+
+## Utilisation
+
+-Experience utilisateur :  
+
+
+-Super-utilisateur :  
+
 
 ## Contact
 
