@@ -80,10 +80,10 @@ Avec ce compte, vous pouvez :
 
 ## Contact
 
-Membres de l'équipe :
+Membres de l'équipe (CY TECH preing2 MI2) :
 
-- Estéban - [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
-- Paul -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
-- Ilan -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
-- Zachary -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- ABEHZELE Estéban - [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- HOPSORE Paul -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- DASSONVILLE Ilan -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- WEISS Zachary -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 
