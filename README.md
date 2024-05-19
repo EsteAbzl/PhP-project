@@ -1,6 +1,6 @@
 ﻿# Projet Développement Web : site de rencontre
 
-Bienvenue sur notre projet de site de rencontre ! Ce projet a été développé par une équipe de quatre personnes en utilisant Replit et VSCode. 
+Bienvenue sur notre projet de site de rencontre ! Ce projet a été développé par une équipe de quatre étudiants en utilisant Replit et VSCode. 
 Le but de ce site est de permettre aux utilisateurs de faire connaissance en fonction de différents critères, et d'échanger entre eux. 
 
 ## Table des matières
