@@ -15,7 +15,7 @@ Le but de ce site est de permettre aux utilisateurs de faire connaissance en fon
 
 
 Notre site de rencontre permet aux utilisateurs de créer des profils, 
-rechercher des correspondances basées sur des critères spécifiques, et échanger des messages. 
+rechercher des correspondances basées sur des critères spécifiques, et échanger des messages.
 Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonction de leur abonnement.
 
 ## Fonctionnalités
@@ -35,9 +35,12 @@ Télécharger le fichier .zip depuis le bouton Code, puis Download Zip
 -Sous Linux :
 
 Une fois le .zip téléchargé, y ouvrir terminal de commande  
-Ecrire : php -S localhost:8080, pour lancer le script php  
-Au navigateur taper localhost:8080/leNomDeLaPage.php  
-Par exemple : localhost:8080/accueil.php
+Ecrire : php -S localhost:8080, pour lancer le script php    
+Dans le navigateur taper : localhost:8080/leNomDeLaPage.php  
+Par exemple : localhost:8080/accueil.php  
+
+Si abscence bibliothèque pour php, faire : sudo apt install php-cli  
+
 
 -Sous windows :
 
