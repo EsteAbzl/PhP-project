@@ -51,7 +51,8 @@
 </head>
 <body>
     <h2>Bannir un utilisateur</h2>
-    <form action="scripts/ban.php" method="post">
+    
+    <form action="../scripts/process_ban.php" method="post">
         Pseudo: <input type="text" name="pseudo"><br>
         <input type="submit" value="Bannir">
     </form>

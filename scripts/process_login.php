@@ -51,12 +51,7 @@
 
     if(verif($pseudo)){
         load_session($pseudo);
-        
-        if($_SESSION['perm'] == "3"){
-            echo "<script>location.href=\"../template_admin.php\";</script>";
-        }
-        else{
-            echo "<script>location.href=\"../homepage.php\";</script>";
-        }
+    
+        echo "<script>location.href=\"../homepage.php\";</script>";
     }
 ?>

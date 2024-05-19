@@ -32,7 +32,7 @@
         
         // On vérifie que le mail n'est pas banni
         $file = fopen("../data/blacklist.csv", "r") or die("erreur lors de l'ouverture de 'blacklist.csv'");
-        if(str_contains(fread($file, filesize("../data/blacklist.csv")+1), '['.$_POST['email'].']')){
+        if(str_contains(fread($file, filesize("../data/blacklist.csv")+1), $_POST['email'])){
             echo "<script>
                 window.alert(\"Cette adresse mail est bannie.\");
                 history.back();
@@ -57,6 +57,9 @@
         fclose($file);
 
         mkdir("../data/profils/".$pseudo);
+
+        copy("../data/default_pfp.png", "../data/profils/".$pseudo."/pfp.png");
+
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "w");
         fwrite($file,   "ELEMENT;VALEUR;\n"
                         ."perm;1".$endline
@@ -67,6 +70,7 @@
                         ."mail;".$_POST['email'].$endline
                         ."genre;".$_POST['genre'].$endline);
         fclose($file);
+
 
         $file = fopen("../data/profils/".$pseudo."/contacts.csv", "w");
         fwrite($file,   "PSEUDO;NB_VISITE;\n");

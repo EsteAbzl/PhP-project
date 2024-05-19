@@ -1,12 +1,12 @@
 <?php
 
-include 'scripts/check_session.php';
+include '../check_session.php';
 $pseudo_recevant = isset($_GET['pseudo']) ? $_GET['pseudo'] : '';
 
 //Notification de message (Machin vous à envoyé un message)
 function addNotification1($pseudo_recevant) {
 
-    $file = 'data/profils/'. $pseudo_recevant .'/notifs.csv';
+    $file = '../../data/profils/'. $pseudo_recevant .'/notifs.csv';
     $data = '1;' . $_SESSION['pseudo'] . ';' . date("Y-m-d H:i:s") . ';' . $_SESSION['pseudo'] . ' vous a envoyé un message.' . "\n";
 
     $handle = fopen($file, 'a');

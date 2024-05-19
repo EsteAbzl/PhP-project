@@ -50,6 +50,7 @@ $hauteurListe = count($resultats) * 14 + 5;
     <style>
         body {
             overflow-x: hidden;
+            background-color: rgb(176, 219, 231);
         }
 
         div.main {
@@ -81,13 +82,13 @@ $hauteurListe = count($resultats) * 14 + 5;
 
             padding-left: 2vw;
             margin-left: 5vw;
-            margin-bottom: 3vw; // distance entre chaque profils 
+            margin-bottom: 3vw; /*distance entre chaque profils */
 
             border-color: black;
             border-style: solid;
             border-radius: 1vw;
-            box-shadow: 0 0 2vh 1vh #6be8b470;
-            background: linear-gradient(#6be8b49d, #d44fae80); 
+            box-shadow: 0 0 3vh 0.5vh #f6ae132a;
+            background: linear-gradient(to bottom right, #ff993394 10%, #cc00ff29 100%);
             
             cursor: pointer;
             display: flex; 
@@ -100,7 +101,9 @@ $hauteurListe = count($resultats) * 14 + 5;
             height: 9vw; 
             margin-right: 4vw;
             
-            border-radius: 50%; 
+            border-radius: 50%;
+            border-color: rgba(255, 255, 255, 0.494);
+            border-style: solid;
         }
 
         span.recherche{
