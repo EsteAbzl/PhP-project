@@ -32,7 +32,7 @@ Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonc
 
 Télécharger le fichier .zip depuis le bouton Code, puis Download Zip  
 
--Sous Linux :
+### Sous Linux :
 
 Une fois le .zip téléchargé, y ouvrir terminal de commande  
 Ecrire : php -S localhost:8080, pour lancer le script php    
@@ -42,7 +42,7 @@ Par exemple : localhost:8080/accueil.php
 Si abscence bibliothèque pour php, faire : sudo apt install php-cli  
 
 
--Sous windows :
+### Sous windows :
 
 Une fois le .zip téléchargé, installer Wampserveur  
 Puis contacter Paul pour qu'il vous lance le site (cf. contact)
