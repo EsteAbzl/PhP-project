@@ -8,10 +8,8 @@ Le but de ce site est de permettre aux utilisateurs de faire connaissance en fon
 1. [Aperçu](#aperçu)
 2. [Fonctionnalités](#fonctionnalités)
 3. [Installation](#installation)
-4. [Utilisation](#utilisation)
-5. [Contribution](#contribution)
-6. [Licence](#licence)
-7. [Contact](#contact)
+4. [Utilisation](#utilisation))
+5. [Contact](#contact)
 
 ## Aperçu
 
