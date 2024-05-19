@@ -34,4 +34,8 @@ Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonc
 
 ## Utilisation
 
+## Contact
+
+quoicoubeh@gmail.com
+
 
