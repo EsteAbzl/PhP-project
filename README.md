@@ -34,14 +34,14 @@ Télécharger le fichier .zip depuis le bouton Code, puis Download Zip
 
 ## Utilisation
 
-Sous Linux :
+-Sous Linux :
 
 Une fois le .zip téléchargé, y ouvrir terminal de commande  
 Ecrire : php -S localhost:8080, pour lancer le script php  
 Au navigateur taper localhost:8080/leNomDeLaPage.php  
 Par exemple : localhost:8080/accueil.php
 
-Sous windows :
+-Sous windows :
 
 Une fois le .zip téléchargé, installer Wampserveur  
 Puis contacter Paul pour vous lance le site (cf. contact)
@@ -51,7 +51,7 @@ Puis contacter Paul pour vous lance le site (cf. contact)
 Membres de l'équipe :
 
 - Estéban - quoicoubeh@gmail.com
-- Paul -
-- Ilan - 
-- Zachary -
+- Paul - quoicoubeh@gmail.com
+- Ilan - quoicoubeh@gmail.com
+- Zachary - quoicoubeh@gmail.com
 
