@@ -50,8 +50,8 @@ Puis contacter Paul pour vous lance le site (cf. contact)
 
 Membres de l'équipe :
 
-- Estéban : quoicoubeh@gmail.com
-- Paul :
-- Ilan : 
-- Zachary :
+- Estéban - quoicoubeh@gmail.com
+- Paul -
+- Ilan - 
+- Zachary -
 
