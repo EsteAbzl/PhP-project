@@ -30,9 +30,18 @@ Différents types d'utilisateurs ont accès à diverses fonctionnalités en fonc
 
 ## Installation
 
-Télécharger le fichier .zip depuis la fenêtre
+Télécharger le fichier .zip depuis le bouton Code, puis Download Zip
 
 ## Utilisation
+
+Sous Linux :
+
+Une fois le .zip télécharger, y ouvrir terminal de commande
+Ecrire : php -S localhost:8080, pour lancer le script php
+Au navigateur taper localhost:8080/leNomDeLaPage.php
+Par exemple : localhost:8080/Accueil.php
+
+Sous windows :
 
 ## Contact
 
