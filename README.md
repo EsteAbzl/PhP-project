@@ -38,7 +38,7 @@ Sous Linux :
 
 Une fois le .zip téléchargé, y ouvrir terminal de commande
 Ecrire : php -S localhost:8080, pour lancer le script php
-Au navigateur taper localhost:8080/leNomDeLaPage.php
+Au navigateur taper localhost:8080/leNomDeLaPage.php  
 Par exemple : localhost:8080/accueil.php
 
 Sous windows :
