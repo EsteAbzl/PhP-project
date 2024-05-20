@@ -73,21 +73,21 @@
 
 
         $file = fopen("../data/profils/".$pseudo."/contacts.csv", "w");
-        fwrite($file,   "PSEUDO;NB_VISITE;\n");
+        fwrite($file, "PSEUDO;NB_VISITE;\n");
         fclose($file);
 
         $file = fopen("../data/profils/".$pseudo."/notifs.csv", "w");
-        fwrite($file,   "PSEUDO;NB_VISITE;\n");
+        fwrite($file, "TYPE;PSEUDO;DATE;MSG;\n");
         fclose($file);
 
         $file = fopen("../data/profils/".$pseudo."/bio.csv", "w");
-        fwrite($file,   "Votre Biographie ici!;\n");
+        fwrite($file, "Votre Biographie ici!;\n");
         fclose($file);
 
-        echo "<script>
-                window.alert(\"Le profil '".$pseudo."' a été créé avec succès.\n
+        echo '<script>
+                window.alert(   "Le profil "'.$pseudo.'" a été créé avec succès.\n
                                 Veuillez maintenent vous connecter.\");
-            </script>";
+            </script>';
 
     }
 

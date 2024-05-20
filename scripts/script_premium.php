@@ -28,7 +28,6 @@
     function showNotification() {
         if(check_perm()){
             document.getElementById("notification2").style.display = "block";
-            modif_perm(1);
         } 
         else{
             notification = document.getElementById("notification").style.display = "block";

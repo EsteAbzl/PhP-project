@@ -19,7 +19,7 @@ function rechercherProfils($recherche) {
             $pseudo = pathinfo($fichier, PATHINFO_FILENAME);
 
             // chemin vers la photo de profil
-            $cheminPhoto = $dossierProfils . $pseudo . '/pfp.jpg';
+            $cheminPhoto = $dossierProfils . $pseudo . '/pfp.png';
 
             // vérifier si le pseudo correspond à la recherche
             if (preg_match("/$recherche/i", $pseudo) && $pseudo != $_SESSION['pseudo']) {

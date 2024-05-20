@@ -23,11 +23,6 @@
             background-color: white;
         }
 
-        /*pour ecrire dans la page*/
-        .main { 
-            margin-left: 25vw;
-        }
-
         /*permet de se déplacer dans le site*/
         .sommaire {
             position: fixed;

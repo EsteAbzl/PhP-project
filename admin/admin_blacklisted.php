@@ -41,14 +41,14 @@
 </head>
 <body>
     <div class="container">
-        <h2>Liste des utilisateurs bannis</h2>
+        <h2>Liste des addresses bannis</h2>
         <table>
             <tr>
-                <th>Utilisateur</th>
+                <th>Mail:</th>
             </tr>
             <?php
             // Chemin vers le fichier blacklist.csv
-            $blacklistFile = "data/blacklist.csv";
+            $blacklistFile = "../data/blacklist.csv";
 
             // Vérifier si le fichier existe
             if(file_exists($blacklistFile)) {

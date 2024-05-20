@@ -134,7 +134,7 @@
         </script>
 
         <div id="editForm" style="display:none;">
-            <form action="./scripts/modif_profil.php" method="post" enctype="multipart/form-data">
+            <form action="./scripts/process_modifProfil.php" method="post" enctype="multipart/form-data">
                 <label for="pseudo">Pseudo :</label><br>
                 <input type="text" id="pseudo" name="pseudo" value="<?php echo $_SESSION['pseudo']?>" maxlength="15" readonly><br>
 
