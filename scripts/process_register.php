@@ -61,7 +61,7 @@
         copy("../data/default_pfp.png", "../data/profils/".$pseudo."/pfp.png");
 
         $file = fopen("../data/profils/".$pseudo."/profil.csv", "w");
-        fwrite($file,   "ELEMENT;VALEUR;\n"
+        fwrite($file,   "ELEMENT;VALEUR".$endline
                         ."perm;1".$endline
                         ."mdp;".$_POST['motdepasse'].$endline
                         ."nom;".$_POST['nom'].$endline

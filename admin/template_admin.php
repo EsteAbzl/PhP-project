@@ -1,5 +1,5 @@
 <?php 
-    include '../scripts/check_session.php'
+    include '../scripts/check_session.php';
     if(!isset($_SESSION['perm']) || $_SESSION['perm'] < 3){
 
         echo "  <script>
@@ -140,6 +140,20 @@
             opacity: 0.6;
         }
 
+        .templateAdmin_notif {
+            position: absolute;
+            top: 39vh;
+            left: 18vw;
+            width: 0.8vw;
+            height: 0.8vw;
+
+            border-radius: 100%;
+            box-shadow: 0 0 2vw 1vw rgba(200, 100, 100, 0.5);
+            background-color: orange;
+
+            opacity: 0.6;
+        }
+
     </style>
 </head>
 
@@ -167,7 +181,16 @@
             <a href="../homepage.php" class="bouton"><img src="../icones/home.png" alt="Icône" class="image">Retour Accueil</a>
             <a href="admin_ban.php" class="bouton"><img src="../icones/006-cross.png" alt="Icône" class="image">Bannir</a>
             <a href="admin_discussion.php" class="bouton"><img src="../icones/026-search.png" alt="Icône" class="image">Discussion ID</a>
-            <a href="admin_signalements.php" class="bouton"><img src="../icones/043-warning.png" alt="Icône" class="image">Signalements</a>
+            <a href="admin_signalements.php" class="bouton"><img src="../icones/043-warning.png" alt="Icône" class="image">
+                Signalements
+                <?php
+                    $file = fopen("../data/signalements.csv", "r");
+                    if(strlen(fread($file, 40)) > 35){
+                        echo '<div class="templateAdmin_notif"></div>';
+                    }
+                    fclose($file);
+                ?>
+            </a>
             <a href="admin_blacklisted.php" class="bouton"><img src="../icones/profil.png" alt="Icône" class="image">Blacklisted</a>
             <a href="admin_modif.php" class="bouton"><img src="../icones/paramètre.png" alt="Icône" class="image">Modifier INFOS</a>
         </div>

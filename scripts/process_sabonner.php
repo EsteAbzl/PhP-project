@@ -48,20 +48,10 @@ function abo($pseudo_recevant) {
     // Lire le nombre actuel et le convertir en entier
     $nbr = (int)file_get_contents($filePath);
 
-    // Message de début de discussion
-    $message = "Commencer la discussion avec ".$sessionPseudo." dès maintenant !";
-    $nouveauMessage = array(
-        "sender" => $sessionPseudo,
-        "message" => $message,
-        "timestamp" => date("Y-m-d H:i:s")
-    );
-
-    // Créer le fichier JSON et y écrire le message
+    // Créer le fichier JSON
     $jsonFilePath = "../data/discussions/{$nbr}.json";
-    if (!file_put_contents($jsonFilePath, json_encode(array($nouveauMessage)))) {
-        echo "Impossible d'écrire dans le fichier JSON.";
-        return;
-    }
+    $tmp = fopen($jsonFilePath, "w");
+    fclose($tmp);
 
     // Infos pour ajouter dans le fichier contacts du recevant
     $dataRecevant = $sessionPseudo . ";" . $nbr . "\n";
