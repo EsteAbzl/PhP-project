@@ -1,6 +1,21 @@
 <?php
 
-include '../check_session.php';
+session_start();
+
+/*echo "  Info de session</br>
+        ||[Profil]: ".$_SESSION['pseudo']."</br>
+        ||[Permission]: ".$_SESSION['perm'];
+*/
+if(!isset($_SESSION['perm']) || $_SESSION['perm'] == 0){
+
+    echo '  <script>
+                widow.alert("Vous n\'êtes pas connecté.")
+            </script>';
+    
+    echo '<script>location.href="../../accueil.php";</script>';
+}
+
+
 $pseudo_recevant = isset($_GET['pseudo']) ? $_GET['pseudo'] : '';
 
 //Notification de visite (qq à visité ton profil)

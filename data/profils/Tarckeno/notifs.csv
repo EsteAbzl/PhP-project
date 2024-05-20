@@ -1,18 +1,5 @@
-<<<<<<< HEAD
 TYPE;PSEUDO;DATE;MSG;
-=======
-1;test;2024-05-16 16:00:15;test vous a envoyé un message.
-2;test;2024-05-18 13:08:18;test vous suit.
-2;test;2024-05-18 13:12:16;test vous suit.
-2;test;2024-05-18 13:19:40;test vous suit.
-2;test;2024-05-18 13:20:01;test vous suit.
-2;test;2024-05-18 13:22:34;test vous suit.
-2;test;2024-05-18 13:23:36;test vous suit.
-2;test;2024-05-18 13:23:38;test vous suit.
-2;test;2024-05-18 13:23:39;test vous suit.
-2;test;2024-05-18 13:23:40;test vous suit.
-2;test;2024-05-18 13:30:09;test vous suit.
-1;admin;2024-05-20 13:47:34;admin vous à liker !
-1;admin;2024-05-20 13:47:47;admin vous à liker !
-1;admin;2024-05-20 13:47:48;admin vous à liker !
->>>>>>> f0a271a45d1607f262fd87fe61b9cab860318737
+1;test;2024-05-20 17:21:23;test vous à liker !
+1;admin;2024-05-20 18:47:19;admin vous à liker !
+2;admin;2024-05-20 18:48:16;admin vous suit.
+2;admin;2024-05-20 18:48:16;admin vous suit.

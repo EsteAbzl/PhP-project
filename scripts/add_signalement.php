@@ -11,8 +11,16 @@ if(!isset($_SESSION['perm']) || $_SESSION['perm'] == 0){
     echo '<script>location.href="../accueil.php";</script>';
 }
 
-include 'notifs/add_notifs_5.php';
+?>    
+    <script>
+        // envoi d'une notification:
+        var requete = new XMLHttpRequest();
+        requete.open("POST", "notifs/add_notifs_5.php", true);
+        requete.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        requete.send();
+    </script>
 
+<?php
     // Vérifier si toutes les données nécessaires sont présentes
     if(isset($_POST['sender']) && isset($_POST['message']) && isset($_POST['timestamp']) && isset($_POST['id'])){
         // Récupérer les données du formulaire
@@ -30,8 +38,7 @@ include 'notifs/add_notifs_5.php';
         fwrite($file, $signalement);
         fclose($file);
 
-        echo "<script>location.href='../homepage.php';</script>";
-        addNotification5();
+        echo "<script>history.back()</script>";
 
     } else {
 

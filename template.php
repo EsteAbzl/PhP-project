@@ -52,6 +52,16 @@
             text-decoration: none;
         }
 
+        .premium {
+            position: absolute;
+            top:3.1vw;
+            left:13vw;
+
+            font-family: 'against.projet';
+            color: #e9b938;
+            font-size: 1vw;
+        }
+
 
 
 
@@ -128,6 +138,20 @@
             opacity: 0.6;
         }
 
+        .template_notif {
+            position: absolute;
+            top: 36.8vh;
+            left: 18vw;
+            width: 0.8vw;
+            height: 0.8vw;
+
+            border-radius: 100%;
+            box-shadow: 0 0 2vw 1vw rgba(200, 100, 100, 0.5);
+            background-color: orange;
+
+            opacity: 0.6;
+        }
+
     </style>
 </head>
 
@@ -139,6 +163,10 @@
     <div class="sommaire">
         <div class="logo">
             <img src="./icones/046-envato.png" alt="Icône" class="image">Dater
+        </div>
+
+        <div class="premium">
+            <em><?php if($_SESSION['perm'] >= 2) echo "Premium";?></em>
         </div>
 
         <script>
@@ -158,7 +186,16 @@
 
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
             <a href="process_rechercher.php?recherche=" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
-            <a href="afficher_notifs.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">Notifications</a>
+            <a href="afficher_notifs.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">
+                Notifications
+                <?php
+                    $file = fopen("data/profils/".$_SESSION['pseudo']."/notifs.csv", "r");
+                    if(strlen(fread($file, 30)) > 25){
+                        echo '<div class="template_notif"></div>';
+                    }
+                    fclose($file);
+                ?>
+            </a>
             <a href="messagerie.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a href="my_profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
             <a href="premium.php" class="bouton"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
