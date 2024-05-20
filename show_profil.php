@@ -124,7 +124,7 @@
             var xhr = new XMLHttpRequest();
             var params = 'pseudo=' + pseudo;
 
-            xhr.open('GET', 'sabo.php?' + params, true);
+            xhr.open('GET', 'scripts/process_sabonner.php?' + params, true);
             xhr.send();
             xhr.onreadystatechange = function(){
                 if(xhr.readyState == XMLHttpRequest.DONE){
@@ -147,7 +147,7 @@
         var xhr = new XMLHttpRequest();
         var params = 'pseudo=' + pseudo;
 
-        xhr.open('GET', 'add_notifs_2.php?' + params, true);
+        xhr.open('GET', 'scripts/notifs/add_notifs_2.php?' + params, true);
         xhr.send();
         xhr.onreadystatechange = function(){
             if(xhr.readyState == XMLHttpRequest.DONE){

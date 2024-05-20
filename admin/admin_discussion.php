@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulaire de bannissement</title>
     <style>
         body {
             display: flex;

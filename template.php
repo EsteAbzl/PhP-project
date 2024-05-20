@@ -162,7 +162,7 @@
             <a href="messagerie.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a href="my_profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
             <a href="premium.php" class="bouton"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
-            <a href="scripts/disconnect.php" class="bouton"><img src="./icones/exit.png" alt="Icône" class="image">Déconnexion</a>
+            <a href="scripts/process_disconnect.php" class="bouton"><img src="./icones/exit.png" alt="Icône" class="image">Déconnexion</a>
         </div>
 
     </div>
