@@ -151,7 +151,7 @@ $nb_profils = count($resultats);
             }
 
 
-            
+
 
             var swipeImg = document.getElementById('swipeImg');
             var swipeName = document.getElementById('swipeName');
@@ -168,7 +168,7 @@ $nb_profils = count($resultats);
             var xhr = new XMLHttpRequest();
             var params = 'pseudo=' + pseudo;
 
-            xhr.open('GET', 'add_notifs_6.php?' + params, true);
+            xhr.open('GET', 'scripts/notifs/add_notifs_6.php?' + params, true);
 
 
             xhr.send();
