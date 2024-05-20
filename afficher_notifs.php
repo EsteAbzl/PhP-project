@@ -98,6 +98,8 @@ $hauteurListe = count($resultats) * 8 + 5;
     }
 
     span.notif_time{
+        text-align: right;
+
         font-size: 1vw; 
         color: grey;
     }
