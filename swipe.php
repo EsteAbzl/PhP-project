@@ -135,6 +135,7 @@
 
             <p>Likez-vous ce profil?</p>
             <button class="swipe">oui</button><button class="swipe">non</button>
+            
                 <?php
                 // Faire un script qui envoi la réponse (contenu dans la div swipeBox)
                 // Faire un script qui charge le prochain profil
