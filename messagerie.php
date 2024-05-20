@@ -6,9 +6,9 @@ function ListeContacte() {
     $resultats = array();
     $chemin_fichier = "data/profils/".$_SESSION['pseudo']."/contacts.csv";
 
-    if (($dossier = fopen($chemin_fichier, "r")) !== FALSE) {
-
-        while (($data = fgetcsv($dossier, 1000, ";")) !== FALSE) {
+    if(($file = fopen($chemin_fichier, "r")) !== FALSE) {
+        fgets($file, 1000);
+        while (($data = fgetcsv($file, 1000, ";")) !== FALSE) {
             $resultats[] = array(
                 'pseudo' => $data[0],
                 'lien_photo' => "data/profils/".$data[0]."/pfp.jpg",
