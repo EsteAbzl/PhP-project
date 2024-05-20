@@ -50,22 +50,24 @@ $nb_profils = count($resultats);
         div.swipeBox{
             position: relative;
             left: 10vw;
-            width: 30vw;
-            height: 45vw;
+            width: 24vw;
+            height: 36vw;
             background-color: burlywood;
 
             text-align: center;
             font-size: 2vw;
         }
 
-        button.swipe{
-            width: 8vw;
-            height: 5vw;
-            margin-right: 3vw;
-            margin-left: 3vw;
+        img.choice{
+            position: relative;
+            bottom: 1.5vw;
+            width: 6vw;
+            height: 6vw;
+            margin-right: 2.5vw;
+            margin-left: 2.5vw;
             padding: 0;
 
-            border: 0.1vw solid;
+            border: hidden;
 
             text-align: center;
             font-size: 2vw;
@@ -75,10 +77,10 @@ $nb_profils = count($resultats);
         
         div.swipeProfil{
             position: relative;
-            left: 2.5vw;
+            left: 2vw;
             top: 2vw;
-            width: 25vw;
-            height: 33vw;
+            width: 20vw;
+            height: 25vw;
 
             background-color: grey;
 
@@ -87,8 +89,8 @@ $nb_profils = count($resultats);
         
         img.swipeImg{
             position: relative;
-            width: 15vw;
-            height: 15vw;
+            width: 12vw;
+            height: 12vw;
             top: 0.5vw;
 
             border-radius: 100%;
@@ -109,13 +111,13 @@ $nb_profils = count($resultats);
             left: 0.5vw;
             padding: 0.5vw;
 
-            width: 23vw;
-            height: 11vw;
+            width: 18vw;
+            height: 6vw;
             background-color: darkgray;
 
             text-align: center;
             font-family: 'quicksand';
-            font-size: 1vw;
+            font-size: 0.8vw;
             color: white;
         }
     </style>
@@ -131,8 +133,8 @@ $nb_profils = count($resultats);
             </div>
             <p>Likez-vous ce profil?</p>
 
-            <button onclick="reloadProfil(); envoyer_notif();" class="swipe">oui</button>
-            <button onclick="reloadProfil();" class="swipe">non</button>
+            <img src="icones/049-dislike.png" onclick="reloadProfil(); envoyer_notif();" class="choice">
+            <img src="icones/021-heart.png" onclick="reloadProfil();" class="choice">
 
         </div>
     </div>
