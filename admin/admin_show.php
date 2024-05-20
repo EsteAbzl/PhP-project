@@ -97,7 +97,7 @@ function afficherDiscussion() {
         
         $id_discussion = $_POST['id'];
 
-        $cheminFichier = 'data/discussions/' . $id_discussion . '.json'; // Chemin vers le fichier de discussion basé sur l'ID de discussion
+        $cheminFichier = '../data/discussions/' . $id_discussion . '.json'; // Chemin vers le fichier de discussion basé sur l'ID de discussion
         $contenu = file_get_contents($cheminFichier);
 
         // Décodage du contenu JSON 
@@ -105,7 +105,7 @@ function afficherDiscussion() {
 
         foreach ($messages as $message) {
             // Récupérer le chemin de la photo de profil de l'expéditeur
-            $sender_photo = 'data/profils/' . $message['sender'] . '/pfp.jpg';
+            $sender_photo = '../data/profils/' . $message['sender'] . '/pfp.jpg';
 
             echo '<div class="message">';
             echo '<img class="profil-photo" src="' . $sender_photo . '" alt="Photo de profil">';
@@ -115,7 +115,7 @@ function afficherDiscussion() {
             echo '<div class="timestamp"><small>' . $message['timestamp'] . '</small></div>';
 
 
-            echo '<form action="signalement.php" method="post">';
+            echo '<form action="../data/signalement.php" method="post">';
             echo '<input type="hidden" name="sender" value="' . $message['sender'] . '">';
             echo '<input type="hidden" name="message" value="' . $message['message'] . '">';
             echo '<input type="hidden" name="timestamp" value="' . $message['timestamp'] . '">';

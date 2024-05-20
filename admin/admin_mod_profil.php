@@ -1,6 +1,6 @@
 <?php
 
-$profil_dir = "data/profils/" . $_POST['pseudo_base'];
+$profil_dir = "../data/profils/" . $_POST['pseudo_base'];
 $profil_csv = $profil_dir . "/profil.csv";
 $bio_csv = $profil_dir . "/bio.csv"; 
 $pfp_path = $profil_dir . "/pfp.jpg"; 
@@ -77,7 +77,7 @@ if ($_FILES['photo']['error'] === UPLOAD_ERR_OK) {
     echo "Une erreur est survenue lors de la réception de la nouvelle photo de profil.";
 }
 
-$nouveauChemin = "data/profils/" . $new_pseudo;
+$nouveauChemin = "../data/profils/" . $new_pseudo;
 
 
 
