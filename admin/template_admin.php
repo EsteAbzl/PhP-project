@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    include '../scripts/check_session.php'
     if(!isset($_SESSION['perm']) || $_SESSION['perm'] < 3){
 
         echo "  <script>

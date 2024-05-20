@@ -105,7 +105,11 @@ function afficherDiscussion() {
 
         foreach ($messages as $message) {
             // Récupérer le chemin de la photo de profil de l'expéditeur
+<<<<<<< HEAD
             $sender_photo = 'data/profils/' . $message['sender'] . '/pfp.png';
+=======
+            $sender_photo = '../data/profils/' . $message['sender'] . '/pfp.jpg';
+>>>>>>> f0a271a45d1607f262fd87fe61b9cab860318737
 
             echo '<div class="message">';
             echo '<img class="profil-photo" src="' . $sender_photo . '" alt="Photo de profil">';
@@ -115,7 +119,7 @@ function afficherDiscussion() {
             echo '<div class="timestamp"><small>' . $message['timestamp'] . '</small></div>';
 
 
-            echo '<form action="signalement.php" method="post">';
+            echo '<form action="../data/signalement.php" method="post">';
             echo '<input type="hidden" name="sender" value="' . $message['sender'] . '">';
             echo '<input type="hidden" name="message" value="' . $message['message'] . '">';
             echo '<input type="hidden" name="timestamp" value="' . $message['timestamp'] . '">';
