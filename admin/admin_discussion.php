@@ -10,6 +10,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -50,7 +51,7 @@
     </style>
 </head>
 <body>
-    <h2>Afficher Une discussion</h2>
+    <h2>Afficher une discussion</h2>
     <form action="admin_show.php" method="post">
         ID: <input type="text" name="id"><br>
         <input type="submit" value="Afficher">

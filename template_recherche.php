@@ -12,7 +12,7 @@
         .main { 
             position: absolute;
             top: 20vh;
-            left: 22vw;
+            left: 25vw;
         }
 
         header {
