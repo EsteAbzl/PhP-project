@@ -73,7 +73,7 @@
 
 
         $file = fopen("../data/profils/".$pseudo."/contacts.csv", "w");
-        fwrite($file, "PSEUDO;NB_VISITE;\n");
+        fwrite($file, "PSEUDO;ID_DISCUTION;\n");
         fclose($file);
 
         $file = fopen("../data/profils/".$pseudo."/notifs.csv", "w");
@@ -81,7 +81,7 @@
         fclose($file);
 
         $file = fopen("../data/profils/".$pseudo."/bio.csv", "w");
-        fwrite($file, "Votre Biographie ici!;\n");
+        fwrite($file, "(Votre Biographie ici!)\n");
         fclose($file);
 
         echo '<script>

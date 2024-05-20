@@ -106,7 +106,7 @@ function afficherDiscussion() {
 
         foreach ($messages as $message) {
             // Récupérer le chemin de la photo de profil de l'expéditeur
-            $sender_photo = 'data/profils/' . $message['sender'] . '/pfp.jpg';
+            $sender_photo = 'data/profils/' . $message['sender'] . '/pfp.png';
 
             echo '<div class="message">';
             echo '<img class="profil-photo" src="' . $sender_photo . '" alt="Photo de profil">';

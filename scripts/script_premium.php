@@ -1,7 +1,7 @@
 <script>
     function modif_perm(perm){
         var requete = new XMLHttpRequest();
-        requete.open("POST", "./scripts/change_perm.php", true);
+        requete.open("POST", "./scripts/process_changePerm.php", true);
         requete.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         
         requete.onload = function(){

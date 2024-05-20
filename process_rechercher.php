@@ -45,8 +45,9 @@ $resultats = rechercherProfils($recherche);
 
 // modif hauteur de la liste en fonct° de nbr de résultats
 $hauteurListe = count($resultats) * 14 + 5; 
-
 ?>
+
+
     <style>
         body {
             overflow-x: hidden;
