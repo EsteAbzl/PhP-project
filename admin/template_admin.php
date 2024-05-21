@@ -109,7 +109,7 @@
         .bouton {
             width: 70%;
             margin-left: 15%;
-            margin-top: 1vh;
+            margin-top: 1vw;
             padding: 2% 0 4% 4%;
             border-radius: 1.25vw;
             box-shadow: 0 0 0.8vh rgba(0, 0, 0, 0.3);
@@ -132,7 +132,7 @@
 
         .image {
             position: relative;
-            top: 0.5vh;
+            top: 0.5vw;
             margin-right: 1vw;
 
             width: 2.5vw;
@@ -142,7 +142,7 @@
 
         .templateAdmin_notif {
             position: absolute;
-            top: 39vh;
+            top: 27.5vw;
             left: 18vw;
             width: 0.8vw;
             height: 0.8vw;
