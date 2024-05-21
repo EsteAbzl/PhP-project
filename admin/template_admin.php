@@ -179,8 +179,8 @@
 
         <div class="boutons">
             <a href="../homepage.php" class="bouton"><img src="../icones/home.png" alt="Icône" class="image">Retour Accueil</a>
-            <a href="admin_ban.php" class="bouton"><img src="../icones/006-cross.png" alt="Icône" class="image">Bannir</a>
-            <a href="admin_discussion.php" class="bouton"><img src="../icones/026-search.png" alt="Icône" class="image">Discussion ID</a>
+            <a href="admin_bannir.php" class="bouton"><img src="../icones/006-cross.png" alt="Icône" class="image">Bannir</a>
+            <a href="admin_selectDiscussionID.php" class="bouton"><img src="../icones/026-search.png" alt="Icône" class="image">Discussion ID</a>
             <a href="admin_signalements.php" class="bouton"><img src="../icones/043-warning.png" alt="Icône" class="image">
                 Signalements
                 <?php

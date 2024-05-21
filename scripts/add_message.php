@@ -1,7 +1,7 @@
 <?php
 
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
     $id_discussion = $_POST['id_discussion'];
@@ -12,25 +12,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($id_discussion !== '' && $pseudo !== '' && $message !== '') {
 
         $cheminFichier = '../data/discussions/' . $id_discussion . '.json';
-
+        
+        date_default_timezone_set('CST');
+        $date = new DateTimeImmutable();
 
         $nouveauMessage = array(
             "sender" => $pseudo,
             "message" => $message,
-            "timestamp" => date("Y-m-d H:i:s")
+            "timestamp" => $date->format("\L\\e d/m/Y à H:i:s"),
+            "id" => -1
         );
 
+        $file = fopen($cheminFichier, "r");
+        $line_pseudo = fgets($file);
+        fclose($file);
 
-        $contenuActuel = file_get_contents($cheminFichier);
-
-        // Décoder le contenu JSON en un tableau associatif
+        // Décoder le contenu JSON
+        $contenuActuel = file_get_contents($cheminFichier, false, null, strlen($line_pseudo));
         $messages = json_decode($contenuActuel, true);
 
-
+        $nouveauMessage['id'] = (isset($messages))? count($messages) : 0;
         $messages[] = $nouveauMessage;
 
-        // Encoder le tableau en JSON
-        $nouveauContenu = json_encode($messages, JSON_UNESCAPED_UNICODE);
+        $nouveauContenu = $line_pseudo.json_encode($messages, JSON_UNESCAPED_UNICODE);
 
 
         file_put_contents($cheminFichier, $nouveauContenu);

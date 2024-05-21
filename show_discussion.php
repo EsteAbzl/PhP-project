@@ -120,13 +120,15 @@ include 'template.php';
 
         .timestamp {
             position: relative;
-            top: 1.65vw;
-            left: 0.5vw;
+            top: 1.69vw;
+            left: 0.3vw;
+
+            margin-right:1vw;
 
             text-align: right;
 
+            font-family: 'Quicksand';
             font-size: 0.7vw;
-            font-weight: bold;
             color: rgb(100, 100, 100);
         }
 
@@ -230,44 +232,50 @@ if(isset($_GET['id'])){
 
     $id_discussion = $_GET['id'];
     $cheminFichier = 'data/discussions/'.$id_discussion.'.json'; // Chemin vers le fichier de discussion basé sur l'ID de discussion
-    $contenu = file_get_contents($cheminFichier);
+    
+    $file = fopen($cheminFichier, "r");
+    $contenu = file_get_contents($cheminFichier, false, null, strlen(fgets($file)));
+    fclose($file);
     // Décodage du contenu JSON 
     $messages = json_decode($contenu, true);
     if($messages){
 
         echo '<div class="chat">';
         foreach($messages as $message){
-            $sender_photo = 'data/profils/'.$message['sender'].'/pfp.png';
-            $tailleMsg = (intdiv(strlen($message['message']), 40) + 1) * 3.1;
-            $largeurMsg = strlen($message['message']) * 1.5;
+            if(isset($message)){
+                $sender_photo = 'data/profils/'.$message['sender'].'/pfp.png';
+                $tailleMsg = (intdiv(strlen($message['message']), 40) + 1) * 3.1;
+                $largeurMsg = strlen($message['message']) * 1.5;
+        
+                echo'<div class="line">';
     
-            echo'<div class="line">';
-
-            echo'<div class="message" style="height:'.$tailleMsg.'vw; width:'.$largeurMsg.'vw; ';
-            if($message['sender'] == $_SESSION['pseudo']) echo 'background-color: lightblue; float: right;';;
-            echo '">';
-                    
-            echo    '<img class="profil-photo" src="'.$sender_photo.'" alt="Photo de profil">'
-                    .'<div class="message_content">'
-                        .'<div class="message_info">'
-                            .'<div class="pseudo">'.$message['sender'].'</div>'
-                            .'<div class="timestamp">'.$message['timestamp'].'</div>'
-                        .'</div>'
-                                            
-                        .'<div class="message-text" >'.$message['message'].'</div>'
-                    .'</div>'
-
-                    .'<form action="scripts/add_signalement.php" method="post">'
-                        .'<input type="hidden" name="sender" value="'.$message['sender'].'">'
-                        .'<input type="hidden" name="message" value="'.$message['message'].'">'
-                        .'<input type="hidden" name="timestamp" value="'.$message['timestamp'].'">'
-                        .'<input type="hidden" name="id" value="'.$id_discussion.'">'
+                echo'<div class="message" style="height:'.$tailleMsg.'vw; width:'.$largeurMsg.'vw; ';
+                if($message['sender'] == $_SESSION['pseudo']){ echo 'background-color: lightgreen; float: right;';}
+                else{ echo 'background-color: lightblue;';}
+                echo '">';
                         
-                        .'<button type="submit" name="report">Signaler</button>'
-                    .'</form>'
-                    
-                .'</div>'// message
-            .'</div>'; // line
+                echo    '<img class="profil-photo" src="'.$sender_photo.'" alt="Photo de profil">'
+                        .'<div class="message_content">'
+                            .'<div class="message_info">'
+                                .'<div class="pseudo">'.$message['sender'].'</div>'
+                                .'<div class="timestamp">'.$message['timestamp'].'</div>'
+                            .'</div>'
+                                                
+                            .'<div class="message-text" >'.$message['message'].'</div>'
+                        .'</div>'
+    
+                        .'<form action="scripts/add_signalement.php" method="post">'
+                            .'<input type="hidden" name="sender" value="'.$message['sender'].'">'
+                            .'<input type="hidden" name="message" value="'.$message['message'].'">'
+                            .'<input type="hidden" name="timestamp" value="'.$message['timestamp'].'">'
+                            .'<input type="hidden" name="id" value="'.$id_discussion.'">'
+                            
+                            .'<button type="submit" name="report">Signaler</button>'
+                        .'</form>'
+                        
+                    .'</div>'// message
+                .'</div>'; // line
+            }
         }
 
         echo '<span id="bas_discussion"></span></div>'; //chat
@@ -293,12 +301,14 @@ else{
         <input type="hidden" name="id_discussion" value="<?php echo isset($_GET['id']) ? $_GET['id'] : ''; ?>">
         <input type="hidden" name="pseudo" value="<?php echo isset($_SESSION['pseudo']) ? $_SESSION['pseudo'] : ''; ?>">
         <input type="hidden" name="lien_photo" value="data/profils/<?php echo isset($_SESSION['profil']) ? $_SESSION['profil'] : ''; ?>/pfp.png">
-        <input type="text" name="message" id="message" maxlength="300" placeholder="Nouveau message" autofocus>
+        <input type="text" name="message" id="message" maxlength="300" placeholder="Nouveau message">
         <button onclick="envoyerNotif()"  type="submit">Envoyer</button>
     </form>
 </div>
 
 <script>
+    location.href="#bas_discussion";
+    document.getElementById("message").focus();
 
     function envoyerNotif() {
         // Récupération de la valeur de pseudo

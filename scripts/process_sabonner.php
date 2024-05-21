@@ -51,6 +51,7 @@ function abo($pseudo_recevant) {
     // Créer le fichier JSON
     $jsonFilePath = "../data/discussions/{$nbr}.json";
     $tmp = fopen($jsonFilePath, "w");
+    fwrite($tmp, $_SESSION['pseudo'].";".$pseudo_recevant.";\n");
     fclose($tmp);
 
     // Infos pour ajouter dans le fichier contacts du recevant
