@@ -1,3 +1,4 @@
+
 <?php
     include 'scripts/check_session.php';
     include 'scripts/script_premium.php';
