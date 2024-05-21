@@ -8,19 +8,26 @@
     <title>Liste des utilisateurs bannis</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            position: absolute;
+            left: 28vw;
+            top: 10vw;
+
             margin: 0;
         }
 
         .container {
-            width: 400px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            position: relative;
+            width: 50vw;
+            padding: 4vw;
+            padding-top: 2vw;
+            margin-bottom: 20vw;
+
+            border: 0.2vw solid #ccc;
+            border-radius: 0.5vw;
+
             background-color: #f9f9f9;
+
+            font-size: 2vw;
         }
 
         table {
@@ -29,8 +36,8 @@
         }
 
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            border: 0.2vw solid #ddd;
+            padding: 2vw;
             text-align: left;
         }
 
