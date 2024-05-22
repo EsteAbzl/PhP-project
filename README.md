@@ -92,7 +92,7 @@ Membres de l'équipe (CY TECH preing2 MI2) :
 - HOPSORE Paul -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 
 
-
+.
 - WEISS Zachary -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 - DASSONVILLE Ilan -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 
