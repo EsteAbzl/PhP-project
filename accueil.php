@@ -30,31 +30,36 @@
             }
 
             .logo {
-                font-family: 'against.projet';
-                font-size: 70px;
-                color: rgba(255, 255, 255, 5);                 
-                text-decoration: none;
-                width: 400px;
-                text-align: center;
-                margin-left: 30px;
                 position: absolute;
-                top: 35px;
-                left: 20px;
+                top: 3vw;
+                left: 0vw;
+                width: 40vw;
+
+                font-family: 'against.projet';
+                color: rgba(255, 255, 255, 1);                 
+                font-size: 7vw;
+                text-decoration: none;
+                text-align: center;
             }
 
             .image {
-                width: 50px;
-                height: 50px;
-                margin-right: 10px;
+                position: relative;
+                top: 2vw;
+                left: 0vw;
+                width: 6vw;
+                height: 6vw;
+                margin-right: 1vw;
             }
 
             body{
+                overflow: hidden;
                 margin: 0;
                 padding:0;
                 background-image: url('https://tinder.com/static/build/184abbc6dbfb37e127d91e1695d0a468.webp');
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
+                width: 100vw;
             }
 
             .overlay{
@@ -70,42 +75,53 @@
 
             .main {
                 position: absolute;
+                top: 25vw;
+                left: 20vw;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                top: 40%;
                 z-index: 2;
-                margin-left: 25%;
+                
+                font-family: quicksand;
+                color: white; 
+                font-weight: bold;
+                font-size: 4vw;
             }
 
             .bouton {
-                font-size: 30px; 
-                background-color: #59EE59; 
-                color: white; 
+                position: relative;
+                right: 2vw;
+                margin-left: 5vw;
+                padding: 2vw;
+
+                background-color: #69aE69; 
                 text-decoration : none;
-                padding: 30px;
-                border-radius: 20px; 
+                
+                box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.65);
                 border: none; 
-                font-weight: bold; 
+                border-radius: 1vw; 
                 transition: background-color 0.3s ease; 
-                margin-left: 100px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
+                
+                color: white; 
+                font-size: 2vw; 
+                font-weight: bold; 
             }
           
+            .bouton:hover {
+                background-color: #77F977; 
+            }
+
             .buttons-container {
                 position: absolute;
                 display: flex; 
                 justify-content: center;
                 align-items: center;
                 flex-direction: row; 
-                top: 58%;
-                left: 31%;
+                top: 32vw;
+                left: 31vw;
                 z-index: 999;
             }
 
-            .bouton:hover {
-                background-color: #77F977; 
-            }
         </style>
 
         
@@ -117,13 +133,13 @@
                 <a href="./accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
             <div class="main">
-                <p style="font-family: quicksand; font-size: 70px; color: white; font-weight: bold;">Trouver l'amour dès maintenant !</p>
+                Trouvez l'amour dès maintenant !
             </div>
             <div class="buttons-container">
-                <a href="register.php" class="bouton">Créer un compte</a>
                 <a href="login.php" class="bouton">Se connecter</a>
+                <a href="register.php" class="bouton">Créer un compte</a>
             </div>
         </div>
-        <p style="font-family: 'quicksand'; font-size: 14px; margin-left:30px; color: white;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>
+        <p style="font-family: 'quicksand'; font-size: 1vw; color: white;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>
     </body>
 </html>
