@@ -19,7 +19,7 @@
         fclose($file);
 
         echo "<script>widow.alert(\"Le fichier notifs.csv a été réinitialisé avec succès.\");</script>";
-        echo "<script>location.href=\"../../afficher_notifs.php\";</script>";
+        echo "<script>history.go(-1)</script>";
         exit;
     }
 

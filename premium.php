@@ -27,25 +27,38 @@
         body {
             margin: 0;
             padding: 0;
+            font-size: 0;
         }
         
         .container {
-            max-width: 1547px;
-            margin: 20px auto;
-            margin-top: 150px;
-            padding: 0 20px;
+            position: absolute;
+            top: 5vw;
+            left: 10vw;
+            width: 80vw;
+
+            text-align: center;
+            padding: 0;
         }
         
 
         
         .cross_bouton {
             position: fixed;
-            text-decoration: none;
+            left: 2vw;
+            top: 1vw;
+            height: 3vw;
+
+            padding: 1.5vw;
+
+            border-radius: 100%;
+
+            background-color: rgba(219, 219, 219, 0.1); 
             transition: background-color 0.3s ease;
-            padding: 20px 25px;
-            border-radius: 50px;
-            left: 50px;
-            top: 50px;
+        }
+
+        .cross_bouton img{
+            height: 3vw;
+            width: 3vw;
         }
 
         .cross_bouton:hover {
@@ -53,51 +66,80 @@
         }
         
         .Titre {
-            position: absolute;
+            position: relative;
             font-family: 'DM Sans', sans-serif;
+            
+            
+            margin-bottom: -5vw;
             text-align: center;
-            font-size: 130px;
-            left: 25%;
+            font-size: 5vw;
         }
 
         .Description {
-            margin-top: 500px;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            margin-top: 10vw;
+            margin-bottom: 2vw;
+            
             font-family:'quicksand';
-            font-size: 25px;
             color: grey;
+            font-size: 1.3vw;
         }
         
-        .subscription-options {
-            margin-top: 100px;
+        .subscription-zone {
+            position: relative;
+
             display: flex;
             justify-content: space-between;
-            margin-bottom: 40px;
-            padding: 50px 100px;
+            margin-bottom: 4vw;
+            padding: 2vw 4vw;
         }
         
-        .subscription-option {
-            flex: 0 0 48%;
+        .subscription-option{
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+            height: 14vw;
+
+            padding: 1vw 2vw 2vw 2vw;
+
             background-color: #BDFF8D;
-            padding: 30px 0px;
-            border-radius: 30px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
+            border-radius: 2vw;
+
+            box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.65);
+
+            font-size: 3vw;
         }
+
+        .price {
+            font-family: 'DM Sans', sans-serif; 
+            margin: 1vw;
+            font-size: 3vw;
+        }
+
+
         
         .comparison-table {
             width: 100%;
+            margin-top: 20vw;
+            
             border-collapse: collapse;
-            margin-top: 40px;
+            
+        }
+
+        .comparison-table th {
+            font-size: 3vw;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .comparison-table td {
+            font-family: 'quicksand';
+             font-size: 1.5vw;
         }
         
         .comparison-table th,
         .comparison-table td {
-            border-left: 1px solid #ccc;
-            border-right: 1px solid #ccc;
-            padding: 10px;
+            border-left: 0.1vw solid #ccc;
+            border-right: 0.1vw solid #ccc;
+            padding: 1vw;
             text-align: center;
         }
         
@@ -113,24 +155,20 @@
             border-bottom: none;
         }
 
-        h2 {
-            font-family: 'quicksand';
-            font-size: 30px;
-        }
-
-
         .bouton {
-            font-size: 20px; 
+            padding: 1vw;
+            margin-top: 1vw;
+            
             background-color: #F9F9F9; 
+            border-radius: 1.5vw; 
+            box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.65);
+            
             color: black; 
+            font-size: 2vw; 
             text-decoration : none;
-            padding: 15px 15px;
-            border-radius: 20px; 
             border: none; 
             font-weight: bold; 
             transition: background-color 0.3s ease; 
-            margin-left: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
         }
 
         .bouton:hover {
@@ -139,21 +177,49 @@
 
         .notification {
             display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #FFFCD1;
-            padding: 200px 50px;
-            border-radius: 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 30px;
         }
 
-        .notification button {
-            margin-top: 10px;
+        .notification-box {
+            position: fixed;
+            top: 20vw;
+            left: 35vw;
+            width: 30vw;
+            height: 14vw;
+            padding: 2vw 2vw;
+            display: flex;
+            flex-direction: column;
+            
+            background-color: #FFFCD1;
+            border-radius: 1.5vw;
+            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.8);
+
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2vw;
+            color: black;
+        }
+
+        .notification-box button {
+            margin-top: 2vw;
             cursor: pointer;
+        }
+
+        .blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(0.5vw);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            color: white;
+            text-align: center;
+            z-index: 9999;
         }
         
     </style>
@@ -162,131 +228,104 @@
     
 <body>
 
-    <a href="homepage.php" class="cross_bouton"><img src="./icones/006-cross.png" alt="Icône" style="width: 30px; height: 30px; "></a>
+    <a href="homepage.php" class="cross_bouton"><img src="./icones/006-cross.png" alt="Icône" "></a>
     
     <div class="container">
         <div>
-            <p class="Titre" style="top: 150px;"><strong>Mettre à niveau vers</strong></p><p class="Titre" style="font-size: 150px; top: 270px; left: 37%;"><strong>Premium</strong><p>
+            <p class="Titre"><strong>Mettre à niveau vers</strong></p>
+            <p class="Titre"><strong>Premium</strong><p>
             <br>
         </div>
 
 
         <div class="Description">
-            <p><strong>Profitez d'une expérience améliorée, d'outils réservés aux membres premium et d'une sécurité de premier ordre.</strong> </p><br>
+            <strong>Profitez d'une expérience améliorée, d'outils réservés aux membres premium et d'une sécurité de premier ordre.</strong><br>
         </div>
             
-        <div class="subscription-options">
-            
-            
+        <div class="subscription-zone">
             <div class="subscription-option">
-                <h2><strong>Abonnement mensuel</strong></h2>
-                <p style="font-family: 'DM Sans', sans-serif; font-size: 50px;"><strong>5,99€  /mois</strong></p>
-                <button class="bouton" onclick="showNotification(); envoyerNotif()">Souscrire</button>
-                
+                Abonnement mensuel
+                <p class="price"><strong>5,99 €</strong>/mois</p>
+                <button class="bouton" onclick="showNotification();">Souscrire</button>
             </div>
-            <div style="background-color: #FEB5F8;"class="subscription-option">
-                <h2>Abonnement annuel</h2>
-                <p style="font-family: 'DM Sans', sans-serif; font-size: 50px;"><strong>71,88 €  /an</strong></p>
-                <button class="bouton" onclick="showNotification(); envoyerNotif()">Souscrire</button>
+            
+            <div class="subscription-option" style="background-color: #FEB5F8">
+                Abonnement annuel
+                <p class="price"><strong>71,88 €</strong>/ans</p>
+                <button class="bouton" onclick="showNotification();">Souscrire</button>
             </div>
         </div>
 
-        <script>
-            function envoyerNotif() {
-    // Récupération de la valeur de pseudo
-
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', 'add_notifs_4.php', true);
-    xhr.send();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == XMLHttpRequest.DONE) {
-            if (xhr.status == 200) {
-                // La requête a réussi, traiter la réponse si nécessaire
-                console.log(xhr.responseText);
-            } else {
-                // La requête a échoué
-                console.error('La requête a échoué avec le statut ' + xhr.status);
-            }
-        }
-    };
-}
-        </script>
-
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th style="font-family: 'DM Sans', sans-serif; font-size: 40px;"><strong>Fonctionnalités</strong></th>
-                    <th style="font-family: 'DM Sans', sans-serif; font-size: 40px;"><strong>Non Premium</strong></th>
-                    <th style="font-family: 'DM Sans', sans-serif; font-size: 40px;"><strong>Premium</strong></th>
+                    <th><strong>Fonctionnalités</strong></th>
+                    <th><strong>Non Premium</strong></th>
+                    <th><strong>Premium</strong></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="font-family: 'quicksand'; font-size: 20px;"><strong>Accès au site</strong></td>
+                    <td><strong>Accès au site</strong></td>
                     <td>✔️</td>
                     <td>✔️</td>
                 </tr>
                 <tr>
-                    <td style="font-family: 'quicksand'; font-size: 20px;"><strong>Possibilité de Swipe</strong></td>
+                    <td><strong>Possibilité de Swipe</strong></td>
                     <td>✔️</td>
                     <td>✔️</td>
                 </tr>
                 <tr>
-                    <td style="font-family: 'quicksand'; font-size: 20px;"><strong>Ajout de contactes</strong></td>
+                    <td><strong>Ajout de contacts</strong></td>
                     <td>✔️</td>
                     <td>✔️</td>
                 </tr>
                 <tr>
-                    <td style="font-family: 'quicksand'; font-size: 20px;"><strong>Accès à la messagerie</strong></td>
+                    <td><strong>Accès à la messagerie</strong></td>
                     <td>❌</td>
                     <td>✔️</td>
                 </tr>
                 <tr>
-                    <td style="font-family: 'quicksand'; font-size: 20px;"><strong>Envoie de messages privés</strong></td>
+                    <td><strong>Envoi de messages privés</strong></td>
                     <td>❌</td>
                     <td>✔️</td>
                 </tr>
                 <tr>
-                    <td style="font-family: 'quicksand'; font-size: 20px;"><strong>Consulter les profils</strong></td>
+                    <td><strong>Consulter les profils</strong></td>
                     <td>❌</td>
                     <td>✔️</td>
                 </tr>
                 
             </tbody>
         </table>
-    </div>
-
-    <div class="notification" id="notification">
-        <span><strong>Vous venez de souscrire à l'abonnement Premium.</strong></span>
-        <br>
-        <button style="margin-left:300px;" class="bouton" onclick="hideNotification()">Suivant</button>
-    </div>
-
-    <div class="notification" id="notification2">
-        <span><strong>Vous avez déjà souscrit à un abonnement</strong></span>
-        <br>
-        <button style="margin-left:300px;" class="bouton" onclick="hideNotification()">Suivant</button>
-    </div>
     
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p style="font-family: 'quicksand'; font-size: 14px; margin-left:30px;"><strong>@ Possibilité de retractation à tout moment</strong></p>
-    <p style="font-family: 'quicksand'; font-size: 14px; margin-left:30px;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>
+        <p style="font-family: 'quicksand'; font-size: 0.8vw; color: black; margin-top: 10vw;"><strong>@ Possibilité de retractation à tout moment</strong></p>
+        <p style="font-family: 'quicksand'; font-size: 0.8vw; color: black;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>
+    
+    </div>
+
+
+    <div class="notification" id="notif_nvx">
+        <div class="blur-overlay">
+            <div class="notification-box">  
+                <span><strong>Vous venez de souscrire à l'abonnement Premium.</strong></span>
+                <br>
+                <button class="bouton" onclick="hideNotification()">Suivant</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notif_deja">
+        <div class="blur-overlay">
+            <div class="notification-box">
+                <span><strong>Vous possédez déjà un abonnement Premium</strong></span>
+                <br>
+                <button class="bouton" onclick="hideNotification()">Suivant</button>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
