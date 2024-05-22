@@ -1,5 +1,6 @@
 <?php
     include 'scripts/check_session.php';
+    include 'scripts/check_premium.php';
     include 'template.php';
 ?>
 
@@ -76,6 +77,8 @@
             border-radius: 0.5vw;
             border: 0.2vw solid black;
             font-size: 2vw;
+
+            cursor: pointer;
         }
 
     </style>

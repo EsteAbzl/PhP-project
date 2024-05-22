@@ -1,5 +1,6 @@
 <?php
 include 'scripts/check_session.php';
+include 'scripts/check_premium.php';
 include 'template.php';
 
 function ListeContact() {

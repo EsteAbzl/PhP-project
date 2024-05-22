@@ -147,42 +147,52 @@ $nb_profils = count($resultats);
             <p class="caption">Likez-vous ce profil?</p>
 
             <div class="swipeProfil" id="swipeProfil">
-                <img class="swipeImg" id="swipeImg" src="<?php echo $resultats[0]['lien_pfp']; ?>">
-                <p class="swipeName" id="swipeName"><strong><?php echo $resultats[0]['pseudo']; ?></strong></p>
-                <p class="swipeBio" id="swipeBio"><?php echo $resultats[0]['bio']; ?></p>
+                <img class="swipeImg" id="swipeImg" src="">
+                <p class="swipeName" id="swipeName"><strong></strong></p>
+                <p class="swipeBio" id="swipeBio"></p>
             </div>
             
-            <img src="icones/049-dislike.png" onclick="reloadProfil(); envoyer_notif();" class="choice">
-            <img src="icones/021-heart.png" onclick="reloadProfil();" class="choice">
+            <img src="icones/049-dislike.png" onclick="reloadProfil();" class="choice">
+            <img src="icones/021-heart.png" onclick="envoyer_notif_like(); reloadProfil();" class="choice">
         </div>
     </div>
 
     <script>
 
         var resultats = <?php echo json_encode($resultats); ?>;
-        var currentIndex = 0;
+        var currentIndex = -1;
 
         function reloadProfil() {
             currentIndex++;
-
 
             if (currentIndex >= resultats.length) {
                 currentIndex = 0;
             }
 
 
-
-
             var swipeImg = document.getElementById('swipeImg');
             var swipeName = document.getElementById('swipeName');
             var swipeBio = document.getElementById('swipeBio');
 
+            //  supprime les event listener
+            var el = swipeImg,
+                elClone = el.cloneNode(true);
+
+            el.parentNode.replaceChild(elClone, el);
+
+            var swipeImg = document.getElementById('swipeImg');
+
             swipeImg.src = resultats[currentIndex]['lien_pfp'];
+            swipeImg.addEventListener("click", function(){
+                envoyer_notif_vu(resultats[currentIndex]['pseudo']);
+                location.href="./show_profil.php?pseudo=" + resultats[currentIndex]['pseudo'];
+            });
+            
             swipeName.innerHTML = '<strong>' + resultats[currentIndex]['pseudo'] + '</strong>';
             swipeBio.innerHTML = resultats[currentIndex]['bio'];
         }
 
-        function envoyer_notif() {
+        function envoyer_notif_like(){
             var pseudo = encodeURIComponent(resultats[currentIndex]['pseudo']);
 
             var xhr = new XMLHttpRequest();
@@ -206,8 +216,30 @@ $nb_profils = count($resultats);
 
                 }
             }; 
-
-
         }
+
+        function envoyer_notif_vu(recevant){
+            // Récupération de la valeur de pseudo
+            var pseudo = encodeURIComponent(recevant);
+
+            var xhr = new XMLHttpRequest();
+            var params = 'pseudo=' + pseudo;
+
+            xhr.open('GET', 'scripts/notifs/add_notifs_3.php?' + params, true);
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    if (xhr.status == 200) {
+                        // La requête a réussi, traiter la réponse si nécessaire
+                        console.log(xhr.responseText);
+                    } else {
+                        // La requête a échoué
+                        console.error('La requête a échoué avec le statut ' + xhr.status);
+                    }
+                }
+            };
+        }
+
+        reloadProfil();
     </script>
 </body>
