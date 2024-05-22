@@ -52,7 +52,9 @@ $nb_profils = count($resultats);
             left: 10vw;
             width: 24vw;
             height: 36vw;
-            background-color: burlywood;
+            background-color: rgba(170,200,255, 0.4);
+
+            border: 0.1vw transparent white;
 
             text-align: center;
             font-size: 2vw;
@@ -69,6 +71,7 @@ $nb_profils = count($resultats);
 
             border: hidden;
 
+            opacity: 0.8;
             text-align: center;
             font-size: 2vw;
             cursor: pointer;
@@ -82,7 +85,8 @@ $nb_profils = count($resultats);
             width: 20vw;
             height: 25vw;
 
-            background-color: grey;
+            border-radius: 0.5vw;
+            background: linear-gradient(to bottom right, #ff993394 10%, #cc00ff29 100%);
 
             font-size: 0;
         }
@@ -101,7 +105,7 @@ $nb_profils = count($resultats);
             bottom: 2.5vw;
 
             font-family: 'against.projet';
-            color: #e9b938;
+            color: #d96908;
             font-size: 3vw;
         }
 
@@ -113,7 +117,8 @@ $nb_profils = count($resultats);
 
             width: 18vw;
             height: 6vw;
-            background-color: darkgray;
+            background-color: rgba(100, 100, 100, 0.5);
+            border-radius: 0.8vw;
 
             text-align: center;
             font-family: 'quicksand';

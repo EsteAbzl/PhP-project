@@ -63,7 +63,7 @@
     
     <form action="../scripts/process_ban.php" method="post">
         Pseudo:<br>
-        <input type="search" list="pseudo" name="pseudo" required>
+        <input autofocus type="search" list="pseudo" name="pseudo" maxlength="15" required>
         <datalist id="pseudo">
             <?php
                 $file = fopen("../data/profil_list.csv", "r");
