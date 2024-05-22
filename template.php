@@ -138,6 +138,10 @@
             opacity: 0.6;
         }
 
+        #disconnect {
+            background-color: lightgray;
+        }
+
         .template_notif {
             position: absolute;
             top: <?php echo $_SESSION['perm'] == 3? "25.9vw" : "22.3vw";?>;
@@ -181,7 +185,7 @@
 
         <div class="boutons">
             <?php if($_SESSION['perm'] == "3"){
-                echo "<a href=\"admin/template_admin.php\" class=\"bouton\" style=\"background-color: #fdbc2c; text-align: center; padding-bottom: 2%\">Modération</a>";
+                echo "<a href=\"admin/admin_signalements.php\" class=\"bouton\" style=\"background-color: #fdbc2c; text-align: center; padding-bottom: 2%\">Modération</a>";
             }?>
 
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
@@ -199,7 +203,7 @@
             <a href="messagerie.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
             <a href="my_profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
             <a href="premium.php" class="bouton"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
-            <a href="scripts/process_disconnect.php" class="bouton"><img src="./icones/exit.png" alt="Icône" class="image">Déconnexion</a>
+            <a href="scripts/process_disconnect.php" class="bouton" id="disconnect"><img src="./icones/exit.png" alt="Icône" class="image">Déconnexion</a>
         </div>
 
     </div>

@@ -1,17 +1,12 @@
 <?php
 include 'check_session.php';
 
-
-
-
-$profil_dir = "../data/profils/" . $_SESSION['pseudo'];
+$profil_dir = "../data/profils/" . $_POST['pseudo'];
 $profil_csv = $profil_dir . "/profil.csv";
 $bio_csv = $profil_dir . "/bio.csv"; 
-$pfp_path = $profil_dir . "/pfp.jpg"; 
+$pfp_link = $profil_dir . "/pfp.png"; 
 
 
-
-$new_pseudo = $_POST['pseudo'];
 $new_motdepasse = $_POST['motdepasse'];
 $new_nom = $_POST['nom'];
 $new_prenom = $_POST['prenom'];
@@ -21,20 +16,25 @@ $new_genre = $_POST['genre'];
 $new_biographie = $_POST['biographie'];
 
 
+$endline = ";                    \n"; // 20 espaces
 
-$ligne2 = file($profil_csv)[1];
+if(isset($_POST['perm'])){
+    $new_perm = $_POST['perm'];
+    $perm = "perm;".$new_perm.$endline;
+}
+else{
+    $perm = file($profil_csv)[1];
+}
 
 
-
-
-$new_data = "ELEMENT;VALEUR;\n";
-$new_data .= $ligne2; // Ajout de la ligne 2 en mémoire
-$new_data .= "mdp;$new_motdepasse;\n";
-$new_data .= "nom;$new_nom;\n";
-$new_data .= "prenom;$new_prenom;\n";
-$new_data .= "date_naissance;$new_datenaissance;\n";
-$new_data .= "mail;$new_email;\n";
-$new_data .= "genre;$new_genre;\n";
+$new_data = "ELEMENT;VALEUR".$endline
+            .$perm
+            ."mdp;".$new_motdepasse.$endline
+            ."nom;".$new_nom.$endline
+            ."prenom;".$new_prenom.$endline
+            ."date_naissance;".$new_datenaissance.$endline
+            ."mail;".$new_email.$endline
+            ."genre;".$new_genre.$endline;
 
 // Supprimer le fichier profil.csv existant
 unlink($profil_csv);
@@ -45,56 +45,32 @@ file_put_contents($profil_csv, $new_data);
 
 
 
-if (file_exists($bio_csv)) {
-
+if(file_exists($bio_csv)) {
     unlink($bio_csv);
-
 }
-
-// Créer le nouveau fichier bio.csv avec la nouvelle biographie
 file_put_contents($bio_csv, $new_biographie);
 
 
-if (file_exists($pfp_path)) {
-
-    unlink($pfp_path);
-
-}
-
 // Renommer et déplacer la nouvelle photo de profil
-if ($_FILES['photo']['error'] === UPLOAD_ERR_OK) {
-
-    $temp_file = $_FILES['photo']['tmp_name'];
-    $new_pfp_path = $profil_dir . "/pfp.png";
-
-
-
-    if (move_uploaded_file($temp_file, $new_pfp_path)) {
-        echo "<script>window.alert('La photo de profil a été mise à jour avec succès.')</script>";
-
-    } else {
-
-        echo "<script>window.alert('Une erreur est survenue lors du téléchargement de la nouvelle photo de profil.')</script>";
-    }
-} else {
+if(isset($_FILES['photo'])){
+    if($_FILES['photo']['error'] === UPLOAD_ERR_OK) {
     
-    echo "<script>window.alert('Une erreur est survenue lors de la réception de la nouvelle photo de profil.')</script>";
+        unlink($pfp_link);
+        $temp_file = $_FILES['photo']['tmp_name'];
+        $new_pfp_path = $profil_dir."/pfp.png";
+    
+    
+    
+        if (move_uploaded_file($temp_file, $new_pfp_path)) {
+            echo "<script>window.alert('La photo de profil a été mise à jour avec succès.')</script>";
+    
+        } 
+        else{
+            echo "<script>window.alert('Une erreur est survenue lors du téléchargement de la nouvelle photo de profil.')</script>";
+        }
+    }
 }
 
-$nouveauChemin = "../data/profils/" . $new_pseudo;
+echo "<script>history.go(-1)</script>";
 
-
-
-if (rename($profil_dir, $nouveauChemin)) {
-
-
-
-    $_SESSION['pseudo'] = $new_pseudo;
-
-    echo "<script>location.href=\"../my_profil.php\";</script>"; // Redirection vers le profil
-
-    exit();
-} else {
-    echo "Une erreur est survenue lors du renommage du dossier.";
-}
 ?>

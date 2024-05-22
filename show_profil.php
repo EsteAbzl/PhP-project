@@ -16,37 +16,66 @@
         }
 
         body {
+            position: absolute;
+            top: 3vw;
+            left: 28vw;
+            margin: 0;
+
+            font-size: 2vw;
             font-family: 'quicksand', sans-serif;
+        }
+
+        .container {
+            
+            top: 3vw;
+            left: 28vw;
+            width: 60vw;
+            padding-bottom: 20vw;
+            margin-bottom: 20vw;
+
+            border: 0.1vw transparent black;
+            background: linear-gradient(to bottom right, #ff993394 10%, #cc00ff29 100%);
+            
+            font-size: 2vw;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 20vw;
+            height: 20vw;
+
+            border: 0.4vw solid rgba(200, 200, 200, 0.4);
+            border-radius: 100vw;
+            margin-top: 1vw;
         }
 
         .name {
             font-family: 'against.projet'; 
             font-weight: bold;
             font-size: 3vw;
-            color: #e9b938;
-        }
-
-        .container {
-            width: 60%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 5vw;
+            color: #d96908;
         }
 
         .bio {
-            width: 60%;
-            height: 300px;
-            max-width: 100%;
-            max-height: 300px;
-            resize: none;
+            width: 40vw;
+            height: 20vw;
+
+            padding: 0.5vw; 
+            border: 0.2vw solid black;
+            border-radius: 0;
+
             font-family: 'quicksand', sans-serif;
-            font-size: 20px;
+            font-size: 1.5vw;
+        }
+
+        .container button {
+            height: 3vw;
+            width: auto;
+
+            padding: 0.5vw;
+            border-radius: 0.5vw;
+            border: 0.2vw solid black;
+            font-size: 2vw;
         }
 
     </style>
