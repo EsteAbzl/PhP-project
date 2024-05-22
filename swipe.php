@@ -166,8 +166,8 @@ $nb_profils = count($resultats);
             currentIndex++;
 
             if (currentIndex >= resultats.length) {
-                currentIndex = 0;
-            }
+                currentIndex = 0; 
+            } 
 
 
             var swipeImg = document.getElementById('swipeImg');
