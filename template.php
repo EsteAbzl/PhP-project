@@ -189,8 +189,8 @@
             }?>
 
             <a href="homepage.php" class="bouton"><img src="./icones/home.png" alt="Icône" class="image">Accueil</a>
-            <a href="process_rechercher.php?recherche=" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
-            <a href="afficher_notifs.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">
+            <a href="recherche.php?recherche=" class="bouton"><img src="./icones/026-search.png" alt="Icône" class="image">Explorer</a>
+            <a href="notification.php" class="bouton"><img src="./icones/043-warning.png" alt="Icône" class="image">
                 Notifications
                 <?php
                     $file = fopen("data/profils/".$_SESSION['pseudo']."/notifs.csv", "r");
@@ -201,7 +201,7 @@
                 ?>
             </a>
             <a href="messagerie.php" class="bouton"><img src="./icones/008-message.png" alt="Icône" class="image">Messagerie</a>
-            <a href="my_profil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
+            <a href="show_myProfil.php" class="bouton"><img src="./icones/profil.png" alt="Icône" class="image">Profil</a>
             <a href="premium.php" class="bouton"><img src="./icones/008-money bag.png" alt="Icône" class="image">Premium</a>
             <a href="scripts/process_disconnect.php" class="bouton" id="disconnect"><img src="./icones/exit.png" alt="Icône" class="image">Déconnexion</a>
         </div>

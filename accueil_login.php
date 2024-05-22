@@ -86,11 +86,11 @@
                 position: absolute;
                 top: 2vw;
                 left: 45vw;
-                width: 40vw;
+                width: 35vw;
                 height: 15vw;
                 background-color: rgba(0, 0, 0, 0.7);
                 border-radius: 3vw; 
-                padding: 2vw;
+                padding: 0.5vw 2vw 2vw 2vw;
                 box-shadow: 0 0 3vw rgba(0, 0, 0, 0.5); 
 
                 text-align: left;

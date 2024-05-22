@@ -88,7 +88,7 @@
 <body>
 
 <header>
-    <form action="process_rechercher.php" method="get">
+    <form action="recherche.php" method="get">
         <input type="text" id="search-box" name="recherche" placeholder="Chercher">
         <button type="submit" id="button-box"><img src="./icones/026-search.png" alt="Icône" class="icone"></button>
 

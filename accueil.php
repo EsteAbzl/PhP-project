@@ -136,8 +136,8 @@
                 Trouvez l'amour dès maintenant !
             </div>
             <div class="buttons-container">
-                <a href="login.php" class="bouton">Se connecter</a>
-                <a href="register.php" class="bouton">Créer un compte</a>
+                <a href="accueil_login.php" class="bouton">Se connecter</a>
+                <a href="accueil_register.php" class="bouton">Créer un compte</a>
             </div>
         </div>
         <p style="font-family: 'quicksand'; font-size: 1vw; color: white;"><strong>© Site entièrement codé par : Esteban Abehzele, Paul Hopsore, Ilan Dassonville, Zachary Weiss.</strong></p>

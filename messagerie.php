@@ -129,7 +129,7 @@ if (!empty($resultats)) {
         // Creation du lien vers le profil
         echo    '<script>
                     function linkTo_'.$resultat['pseudo'].'(){
-                        location.href="show_discussion.php?id='.$resultat['id_discussion'].'&pseudo='.$resultat['pseudo'].'#bas_discussion";
+                        location.href="discussion.php?id='.$resultat['id_discussion'].'&pseudo='.$resultat['pseudo'].'#bas_discussion";
                     }
                 </script>';
 

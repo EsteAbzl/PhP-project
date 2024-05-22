@@ -10,7 +10,27 @@
             }
         }
         requete.send("perm="+perm);
-     }
+    }
+
+    function envoyerNotif() {
+        // Récupération de la valeur de pseudo
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('GET', 'scripts/notifs/add_notifs_4.php', true);
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+                    // La requête a réussi, traiter la réponse si nécessaire
+                    console.log(xhr.responseText);
+                } else {
+                    // La requête a échoué
+                    console.error('La requête a échoué avec le statut ' + xhr.status);
+                }
+            }
+        };
+    }
     
 
     function check_perm(){
@@ -27,17 +47,18 @@
     
     function showNotification() {
         if(check_perm()){
-            document.getElementById("notification2").style.display = "block";
+            document.getElementById("notif_deja").style.display = "block";
         } 
         else{
-            notification = document.getElementById("notification").style.display = "block";
+            notification = document.getElementById("notif_nvx").style.display = "block";
             modif_perm(2);
+            envoyerNotif();
         }
     }
 
     function hideNotification() {
-        document.getElementById("notification").style.display = "none";
-        document.getElementById("notification2").style.display = "none";
+        document.getElementById("notif_nvx").style.display = "none";
+        document.getElementById("notif_deja").style.display = "none";
     }
 
 </script>

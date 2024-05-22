@@ -272,7 +272,7 @@
 
                 <textarea class="bio" readonly>'.$GLOBALS['info_bio'].'</textarea>
 
-                <form id="loadProfil" action="my_profil.php" method="get">
+                <form id="loadProfil" action="show_myProfil.php" method="get">
                     <label for="modif"></label>
                     <input type="hidden" name="modif" value="1">
                     <input type="submit" value="Modifier le profil">
