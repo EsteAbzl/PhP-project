@@ -1,5 +1,6 @@
 <?php
 include 'scripts/check_session.php';
+include 'scripts/check_premium.php';
 include 'template.php';
 
 ?>
@@ -234,8 +235,15 @@ if(isset($_GET['id'])){
     $cheminFichier = 'data/discussions/'.$id_discussion.'.json'; // Chemin vers le fichier de discussion basé sur l'ID de discussion
     
     $file = fopen($cheminFichier, "r");
-    $contenu = file_get_contents($cheminFichier, false, null, strlen(fgets($file)));
+    $pseudo_conv_line = fgets($file);
     fclose($file);
+
+    $pseudo_conv = str_getcsv($pseudo_conv_line, ";");
+    if(($_SESSION['pseudo'] != $pseudo_conv[0]) && ($_SESSION['pseudo'] != $pseudo_conv[1])){
+        echo '<script>location.href="./homepage.php";</script>';
+    }
+
+    $contenu = file_get_contents($cheminFichier, false, null, strlen($pseudo_conv_line));
     // Décodage du contenu JSON 
     $messages = json_decode($contenu, true);
     if($messages){

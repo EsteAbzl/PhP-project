@@ -175,7 +175,7 @@
 
         <script>
             function link_profil(){
-                location.href="my_profil.php";
+                location.href="show_myProfil.php";
             }
         </script>
 
