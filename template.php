@@ -20,7 +20,16 @@
         }
         
         body{
-            background-color: white;
+            background-image: url("./image/bg_template2.jpg");
+            background-color: rgba(0, 0, 0, 1);
+            overflow-x: hidden;
+            margin: 0;
+            padding:0;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: 20vw 0vw;
+            height: 100vh;
+            width: 100vw;
         }
 
         /*permet de se déplacer dans le site*/
@@ -108,7 +117,7 @@
             width: 70%;
             margin-left: 15%;
             margin-top: 1vw;
-            padding: 2% 0 4% 4%;
+            padding: 1% 0 4% 4%;
             border-radius: 1.25vw;
             box-shadow: 0 0 0.8vh rgba(0, 0, 0, 0.3);
             box-sizing: border-box;
@@ -140,6 +149,10 @@
 
         #disconnect {
             background-color: lightgray;
+        }
+
+        #disconnect:hover {
+            background-color: rgb(220, 50, 50, 0.5);
         }
 
         .template_notif {

@@ -25,8 +25,8 @@
                 
             padding: 0;
             color: black;
-            background: linear-gradient(#e66465, #9198e5);
-            box-shadow: 0vh 0 4vh 0.5vh rgba(9, 22, 36, 0.6);
+            background: linear-gradient(#e66464c2, #9198e57e);
+            box-shadow: 0vh 0 4vh 0.5vh rgba(9, 22, 36, 0.37);
         }
 
         button {

@@ -32,7 +32,7 @@
             .logo {
                 position: absolute;
                 top: 3vw;
-                left: 0vw;
+                left: -2vw;
                 width: 40vw;
 
                 font-family: 'against.projet';
@@ -55,7 +55,7 @@
                 overflow: hidden;
                 margin: 0;
                 padding:0;
-                background-image: url('https://tinder.com/static/build/184abbc6dbfb37e127d91e1695d0a468.webp');
+                background-image: url("./image/bg_lol1.jpg");
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
@@ -90,11 +90,11 @@
 
             .bouton {
                 position: relative;
-                right: 2vw;
-                margin-left: 5vw;
+                right: 21vw;
+                margin-left: 15vw;
                 padding: 2vw;
 
-                background-color: #69aE69; 
+                background-color: rgb(119, 249, 119, 0.5); 
                 text-decoration : none;
                 
                 box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.65);
@@ -133,7 +133,7 @@
                 <a href="./accueil.php" class="logo"><img src="./icones/logo accueil.png" alt="Icône" class="image">Dater</a>
             </div>
             <div class="main">
-                Trouvez l'amour dès maintenant !
+                Trouvez l'amour sur la faille !
             </div>
             <div class="buttons-container">
                 <a href="accueil_login.php" class="bouton">Se connecter</a>

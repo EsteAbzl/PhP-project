@@ -17,9 +17,6 @@
         }
 
         body {
-            position: absolute;
-            top: 3vw;
-            left: 28vw;
             margin: 0;
 
             font-size: 2vw;
@@ -27,13 +24,14 @@
         }
 
         .container {
-            
+            position: absolute;
             top: 3vw;
             left: 28vw;
             width: 60vw;
             padding-bottom: 20vw;
             margin-bottom: 20vw;
 
+            border-radius: 5vw;
             border: 0.1vw transparent black;
             background: linear-gradient(to bottom right, #ff993394 10%, #cc00ff29 100%);
             

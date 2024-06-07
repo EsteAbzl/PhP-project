@@ -70,6 +70,7 @@ include 'template.php';
 
         .chat_vide {
             font-size: 2vw;
+            color: white;
         }
 
         .line {
@@ -182,7 +183,7 @@ include 'template.php';
             height: 7vw;
 
 
-            background-color: #f0f0f0;
+            background-color: #f0f0f0aa;
             padding: 2vw;
             margin: 0;
             border: solid;

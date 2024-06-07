@@ -47,13 +47,28 @@ $nb_profils = count($resultats);
 <!DOCTYPE html>
 <head>
     <style>
+        body{
+            overflow-x: hidden;
+            margin: 0;
+            padding:0;
+            background-image: url("./image/bg_swipe.jpg");
+            background-size: cover;
+            background-attachment: local;
+            background-position: 10vw 0vw;
+            height: 100vh;
+            width: 100vw;
+        }
+
         div.swipeBox{
             position: relative;
             top: 0vw;
-            left: 15vw;
+            left: 20vw;
             width: 24vw;
             height: 45vw;
-            background-color: rgba(170,200,255, 0.4);
+
+            margin-bottom: 5vw;
+            background-color: rgba(170,200,255, 0);
+            border-radius: 1vw;
 
             border: 0.1vw transparent white;
 
@@ -64,7 +79,7 @@ $nb_profils = count($resultats);
         p.caption {
             position: relative;
             top: 0.5vw;
-            color: rgba(20, 20, 20, 0.5);
+            color: rgba(20, 20, 20, 0.9);
         }
         
         
@@ -111,7 +126,7 @@ $nb_profils = count($resultats);
 
             width: 17vw;
             height: 12vw;
-            background-color: rgba(220, 220, 220, 0.3);
+            background-color: rgba(220, 220, 220, 0.9);
             border: 0.1vw solid rgba(20, 20, 20, 0.2);
             border-radius: 0.8vw 0.8vw 2vw 4vw;
 
@@ -121,21 +136,34 @@ $nb_profils = count($resultats);
             color: black;
         }
 
+        p.choice {
+            position: relative;
+            top: 0vw;
+            margin: 0;
+            color: rgb(0, 0, 0);
+            
+        }
+
         img.choice{
             position: relative;
-            top: 1vw;
-            width: 6vw;
-            height: 6vw;
-            margin-right: 2.5vw;
-            margin-left: 2.5vw;
+            top: -1vw;
+            width: 8vw;
+            height: 8vw;
+            margin-right: 1.5vw;
+            margin-left: 1.5vw;
             padding: 0;
 
             border: hidden;
 
-            opacity: 0.8;
+            opacity: 1;
+            transition: opacity 0.4s ease;
             text-align: center;
             font-size: 2vw;
             cursor: pointer;
+        }
+
+        img.choice:hover{
+            opacity: 0.8;
         }
 
     </style>
@@ -152,8 +180,9 @@ $nb_profils = count($resultats);
                 <p class="swipeBio" id="swipeBio"></p>
             </div>
             
-            <img src="icones/049-dislike.png" onclick="reloadProfil();" class="choice">
-            <img src="icones/021-heart.png" onclick="envoyer_notif_like(); reloadProfil();" class="choice">
+            <p class="choice">Faites un choix!</p>
+            <img src="icones/swipe.png" alt="Swipe!" onclick="reloadProfil();" class="choice" >
+            <img src="icones/poro_like.png" alt="Like!" onclick="envoyer_notif_like(); reloadProfil();" class="choice">
         </div>
     </div>
 

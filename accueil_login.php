@@ -17,7 +17,7 @@
             .logo {
                 position: absolute;
                 top: 3vw;
-                left: 0vw;
+                left: -2vw;
                 width: 40vw;
 
                 font-family: 'against.projet';
@@ -40,7 +40,7 @@
                 overflow: hidden;
                 margin: 0;
                 padding:0;
-                background-image: url('https://tinder.com/static/build/184abbc6dbfb37e127d91e1695d0a468.webp');
+                background-image: url("./image/bg_ksante2.jpg");
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
@@ -61,11 +61,10 @@
 
             .bouton {
                 position: relative;
-                right: 2vw;
-                margin-left: 5vw;
-                padding: 2vw;
+                right: 3vw;
+                padding: 0vw 2vw 0vw 2vw;
 
-                background-color: #69aE69; 
+                background-color: rgb(160, 250, 119, 0.5); 
                 text-decoration : none;
                 
                 box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.65);
@@ -79,27 +78,29 @@
             }
           
             .bouton:hover {
-                background-color: #77F977; 
+                background-color: rgb(220, 50, 200, 0.1);
             }
 
             .container {
                 position: absolute;
-                top: 2vw;
-                left: 45vw;
-                width: 35vw;
-                height: 15vw;
-                background-color: rgba(0, 0, 0, 0.7);
+                top: 15vw;
+                left: 5vw;
+                width: 20vw;
+                height: 10vw;
+                background-color: rgba(0, 0, 0, 0.6);
                 border-radius: 3vw; 
                 padding: 0.5vw 2vw 2vw 2vw;
-                box-shadow: 0 0 3vw rgba(0, 0, 0, 0.5); 
+                box-shadow: 0 0 3vw rgba(100, 100, 100, 0.3); 
 
                 text-align: left;
             }
 
             h1 {
-                margin-bottom: 2vw; 
+                position: relative;
+                top: -1vw;
+                margin-bottom: 0vw; 
                 margin-left: 5vw;
-                box-shadow: 0 0 2vw rgba(0, 0, 0, 0.5); 
+                box-shadow: 0 0 2vw rgba(0, 0, 0, 0); 
                 
                 
                 color: white; 
@@ -113,20 +114,20 @@
             }
 
             label {
-                margin-left:2vw;
+                margin-left:3vw;
                 
 
                 color: white; 
                 font-family:'quicksand';
-                font-size: 1.5vw; 
+                font-size: 1vw; 
             }
 
             input {
-                height: 2vw; 
-                width: 27vw; 
+                height: 1.3vw; 
+                width: auto; 
                 margin-top: 0.5vw; 
                 margin-bottom: 0.7vw;
-                margin-left:4vw;
+                margin-left:2vw;
 
                 border-style: hidden;
                 

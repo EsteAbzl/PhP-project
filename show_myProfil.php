@@ -16,23 +16,18 @@
         }
 
         body {
-            position: absolute;
-            top: 3vw;
-            left: 28vw;
-            margin: 0;
-
             font-size: 2vw;
             font-family: 'quicksand', sans-serif;
         }
 
         .container {
-            
+            position: absolute;
             top: 3vw;
             left: 28vw;
             width: 60vw;
-            padding-bottom: 20vw;
-            margin-bottom: 20vw;
 
+            margin-bottom: 5vw;
+            border-radius: 5vw;
             border: 0.1vw transparent black;
             background: linear-gradient(to bottom right, #ff993394 10%, #cc00ff29 100%);
             
@@ -206,7 +201,7 @@
 
         #suppr {
             position: relative;
-            top: 6vw;
+            top: 1vw;
             height:5vw;
             padding: 1vw;
             background: red; 
