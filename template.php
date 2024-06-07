@@ -25,9 +25,9 @@
             overflow-x: hidden;
             margin: 0;
             padding:0;
-            background-size: cover;
             background-attachment: fixed;
-            background-position: 20vw 0vw;
+            background-position: 17vw 0vw;
+            background-size: 100vw;
             height: 100vh;
             width: 100vw;
         }
@@ -42,7 +42,7 @@
                 z-index: 999;
 
             padding: 0;
-            background-color: white;
+            background: linear-gradient(to top right, #733078 30%, #dbb494e0 100%);
             box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
         }
 
