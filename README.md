@@ -89,7 +89,7 @@ D'autres compte peuvent être promus Administrateurs à partir de l'onglet de mo
 Membres de l'équipe (CY TECH preing2 MI2) :
 
 - ABEHZELE Estéban - [esteabzl@gmail.com](mailto:esteabzl@gmail.com)
-- HOPSORE Paul -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- HOPSORE Paul -  [hopsorepaul@gmail.com](mailto:hopsorepaul@gmail.com)
 - WEISS Zachary -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 - DASSONVILLE Ilan -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
 
