@@ -1,6 +1,6 @@
 # Projet Développement Web : Site de Rencontre
 
-![Capture d'écran de la page d'accueil](PhP-project/demo/accueil.PNG)
+![Capture d'écran de la page d'accueil](demo/accueil.PNG)
 
 Bienvenue sur notre projet de site de rencontre ! Développé par une équipe de quatre étudiants, ce site permet aux utilisateurs de faire connaissance et d'échanger entre eux.
 
