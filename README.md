@@ -1,4 +1,4 @@
-![Texte alternatif](demo/accueil.png)
+![Texte alternatif](PhP-project/demo/accueil.PNG)
 
  # Projet Développement Web : site de rencontre
 
@@ -21,7 +21,7 @@ rechercher des correspondances, parcourir les profil grace au swipe, et échange
 Un abonnement (fictif) est nécéssaire afin d'accéder à toutes les fonctionnalitées mises à disposition par le site.
 Les administrateurs ont aussi un espace dédié à la modération des profils (essayez admin, admin).
 
-![Texte alternatif](demo/demo_1.png)
+![Texte alternatif](PhP-project/demo/demo_1.png)
 
 ## Fonctionnalités
 
@@ -66,19 +66,19 @@ Puis contacter Paul pour qu'il vous lance le site (cf. contact)
      - **dislike** pour passer.
    - Les utilisateurs peuvent également rechercher directement le pseudo d'un autre utilisateur afin d'acceder à son profil.
 
-     ![Texte alternatif](demo/demo_2.png)
+     ![Texte alternatif](PhP-project/demo/demo_2.png)
 
 3. **Messagerie** :
    - Une fois une correspondance établie ils peuvent échanger des messages.
    - Les discussions sont en temps réel (si réactualisation frénétique de la page).
-     ![Texte alternatif](demo/demo_3.png)
+     ![Texte alternatif](PhP-project/demo/demo_3.png)
 
 4. **Premium** :
    - Les utilisateurs peuvent choisir parmi différents niveaux d'abonnement au .
    - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité leur profil, et des options de messagerie supplémentaires.
    - Les utilisateurs féminins bénéficient d'un accès gratuit aux fonctionnalités de base du site.
   
-     ![Texte alternatif](demo/premium.png)
+     ![Texte alternatif](PhP-project/demo/premium.png)
 
 ### Super-utilisateur :  
 
@@ -99,6 +99,6 @@ Membres de l'équipe (CY TECH preing2 MI2) :
 
 - ABEHZELE Estéban - [esteabzl@gmail.com](mailto:esteabzl@gmail.com)
 - HOPSORE Paul -  [hopsorepaul@gmail.com](mailto:hopsorepaul@gmail.com)
-- WEISS Zachary -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
-- DASSONVILLE Ilan -  [quoicoubeh@gmail.com](mailto:quoicoubeh@gmail.com)
+- WEISS Zachary -  [wzachary@sfr.fr@gmail.com](mailto:wzachary@sfr.fr)
+- DASSONVILLE Ilan -  [ilan.dassonville1@gmail.com@gmail.com](mailto:ilan.dassonville1@gmail.com)
 
