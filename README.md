@@ -1,11 +1,10 @@
-![Texte alternatif](PhP-project/demo/accueil.PNG)
+# Projet Développement Web : Site de Rencontre
 
- # Projet Développement Web : site de rencontre
+![Capture d'écran de la page d'accueil](PhP-project/demo/accueil.PNG)
 
-Bienvenue sur notre projet de site de rencontre ! Ce projet a été développé par une équipe de quatre étudiants en utilisant Replit et VSCode. 
-Le but de ce site est de permettre aux utilisateurs de faire connaissance et d'échanger entre eux. 
+Bienvenue sur notre projet de site de rencontre ! Développé par une équipe de quatre étudiants, ce site permet aux utilisateurs de faire connaissance et d'échanger entre eux.
 
-## Table des matières
+## Table des Matières
 
 1. [Aperçu](#aperçu)
 2. [Fonctionnalités](#fonctionnalités)
@@ -15,68 +14,75 @@ Le but de ce site est de permettre aux utilisateurs de faire connaissance et d'�
 
 ## Aperçu
 
+Notre site de rencontre permet aux utilisateurs de créer leur profil, de rechercher des correspondances, de parcourir les profils grâce au système de swipe et d'échanger des messages. Un abonnement (fictif) est nécessaire pour accéder à toutes les fonctionnalités mises à disposition par le site. Les administrateurs disposent également d'un espace dédié à la modération des profils (identifiants : admin/admin).
 
-Notre site de rencontre permet aux utilisateurs de créer leur profil, 
-rechercher des correspondances, parcourir les profil grace au swipe, et échanger des messages.
-Un abonnement (fictif) est nécéssaire afin d'accéder à toutes les fonctionnalitées mises à disposition par le site.
-Les administrateurs ont aussi un espace dédié à la modération des profils (essayez admin, admin).
-
-![Texte alternatif](PhP-project/demo/demo_1.png)
+![Capture d'écran de l'interface de swipe](PhP-project/demo/demo_1.png)
 
 ## Fonctionnalités
 
-- **Inscription et Connexion** : Les utilisateurs peuvent créer un compte et se connecter.
-- **Swipe et recherche** : Les utilisateurs peuvent liker les profils qui leurs sont proposés.
-- **Profils Utilisateurs** : Les utilisateurs peuvent créer et éditer leurs profils.
-- **Messagerie** : Les utilisateurs peuvent envoyer et recevoir des messages.
-- **Abonnement Premium** : Différents niveaux d'abonnement ouvrant l'accées à toutes les fonctionnalités du site.
+- **Inscription et Connexion** : Les utilisateurs peuvent créer un compte et se connecter facilement.
+- **Swipe et Recherche** : L'interface permet aux utilisateurs de liker les profils qui leur sont proposés.
+- **Profils Utilisateurs** : Les utilisateurs peuvent créer et modifier leurs profils avec des détails personnels.
+- **Messagerie** : Échange de messages en temps réel entre utilisateurs.
+- **Abonnement Premium** : Accès à des fonctionnalités avancées en fonction du niveau d'abonnement.
 - **Gestion des Fichiers** : Création et manipulation de fichiers pour le stockage des données utilisateur, accessibles par les administrateurs.
-- **Administration** : Outils pour les administrateurs pour gérer les utilisateurs et les données du site (super-utilisateur).
+- **Administration** : Outils de gestion pour les administrateurs afin de modérer les utilisateurs et les données du site.
 
 ## Installation
 
-Télécharger le fichier .zip depuis le bouton Code, puis Download Zip  
+### Téléchargement
 
-### Sous Linux :
+Téléchargez le fichier .zip depuis le bouton "Code" et sélectionnez "Download Zip".
 
-Une fois le .zip téléchargé, y ouvrir terminal de commande  
-Ecrire : php -S localhost:8080, pour lancer le script php    
-Dans le navigateur taper : localhost:8080/leNomDeLaPage.php  
-Par exemple : localhost:8080/accueil.php  
+### Sous Linux
 
-Si abscence bibliothèque pour php, faire : sudo apt install php-cli  
+1. Ouvrez le terminal de commande dans le dossier où le .zip a été téléchargé.
+2. Décompressez le fichier et naviguez dans le dossier décompressé.
+3. Lancez le serveur PHP avec la commande suivante :
+   ```bash
+   php -S localhost:8080
+   ```
 
+4. Ouvrez votre navigateur et entrez l'URL suivante :
 
-### Sous windows :
+Dans le navigateur taper : 
+```bash
+localhost:8080/leNomDeLaPage.php
+```
 
-Une fois le .zip téléchargé, installer Wampserveur  
-Puis contacter Paul pour qu'il vous lance le site (cf. contact)
+Par exemple : `localhost:8080/accueil.php` 
+
+5. Si la bibliothèque PHP n'est pas installée, exécutez :
+   ```bash
+   sudo apt install php-cli
+   ```
 
 ## Utilisation
 
 ### Experience utilisateur :  
 
 1. **Création d'un Compte** :
-   - Les utilisateurs peuvent s'inscrire en fournissant leurs informations de base (nom, email, mot de passe, etc.).
-   - Après inscription, ils peuvent compléter leur profil avec des détails supplémentaires comme une photo de profil, une bio, et des infos personelles.
+   - Inscrivez-vous en fournissant vos informations de base (nom, email, mot de passe, etc.).
+   - Complétez votre profil avec des détails supplémentaires comme une photo de profil et une bio.
 
 2. **Navigation et Correspondance** :
-   - Les utilisateurs peuvent parcourir les profils en utilisant une interface de type "swipe" :
+   - Utilisez l'interface de type "swipe" pour parcourir les profils :
      - **like** pour indiquer un intérêt.
-     - **dislike** pour passer.
-   - Les utilisateurs peuvent également rechercher directement le pseudo d'un autre utilisateur afin d'acceder à son profil.
+     - **dislike** pour passer au profil suivant.
+   - Vous pouvez également rechercher directement un autre utilisateur par son pseudo.
 
      ![Texte alternatif](PhP-project/demo/demo_2.png)
 
 3. **Messagerie** :
-   - Une fois une correspondance établie ils peuvent échanger des messages.
-   - Les discussions sont en temps réel (si réactualisation frénétique de la page).
+   - Échangez des messages avec les utilisateurs avec lesquels vous avez établi une correspondance.
+   - Les discussions se font en temps réel (actualisation de la page nécessaire).
+   - 
      ![Texte alternatif](PhP-project/demo/demo_3.png)
 
 4. **Premium** :
-   - Les utilisateurs peuvent choisir parmi différents niveaux d'abonnement au .
-   - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité leur profil, et des options de messagerie supplémentaires.
-   - Les utilisateurs féminins bénéficient d'un accès gratuit aux fonctionnalités de base du site.
+   - Choisissez parmi différents niveaux d'abonnement.
+   - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité votre profil, et des options de messagerie supplémentaires.
+   - Les utilisatrices bénéficient d'un accès gratuit aux fonctionnalités de base
   
      ![Texte alternatif](PhP-project/demo/premium.png)
 
