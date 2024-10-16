@@ -1,4 +1,6 @@
-﻿# Projet Développement Web : site de rencontre
+![Texte alternatif](demo/accueil.png)
+
+ # Projet Développement Web : site de rencontre
 
 Bienvenue sur notre projet de site de rencontre ! Ce projet a été développé par une équipe de quatre étudiants en utilisant Replit et VSCode. 
 Le but de ce site est de permettre aux utilisateurs de faire connaissance et d'échanger entre eux. 
@@ -18,6 +20,8 @@ Notre site de rencontre permet aux utilisateurs de créer leur profil,
 rechercher des correspondances, parcourir les profil grace au swipe, et échanger des messages.
 Un abonnement (fictif) est nécéssaire afin d'accéder à toutes les fonctionnalitées mises à disposition par le site.
 Les administrateurs ont aussi un espace dédié à la modération des profils (essayez admin, admin).
+
+![Texte alternatif](demo/demo_1.png)
 
 ## Fonctionnalités
 
@@ -62,14 +66,19 @@ Puis contacter Paul pour qu'il vous lance le site (cf. contact)
      - **dislike** pour passer.
    - Les utilisateurs peuvent également rechercher directement le pseudo d'un autre utilisateur afin d'acceder à son profil.
 
+     ![Texte alternatif](demo/demo_2.png)
+
 3. **Messagerie** :
    - Une fois une correspondance établie ils peuvent échanger des messages.
    - Les discussions sont en temps réel (si réactualisation frénétique de la page).
+     ![Texte alternatif](demo/demo_3.png)
 
 4. **Premium** :
    - Les utilisateurs peuvent choisir parmi différents niveaux d'abonnement au .
    - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité leur profil, et des options de messagerie supplémentaires.
    - Les utilisateurs féminins bénéficient d'un accès gratuit aux fonctionnalités de base du site.
+  
+     ![Texte alternatif](demo/premium.png)
 
 ### Super-utilisateur :  
 
