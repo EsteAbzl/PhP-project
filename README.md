@@ -16,7 +16,7 @@ Bienvenue sur notre projet de site de rencontre ! Développé par une équipe de
 
 Notre site de rencontre permet aux utilisateurs de créer leur profil, de rechercher des correspondances, de parcourir les profils grâce au système de swipe et d'échanger des messages. Un abonnement (fictif) est nécessaire pour accéder à toutes les fonctionnalités mises à disposition par le site. Les administrateurs disposent également d'un espace dédié à la modération des profils (identifiants : admin/admin).
 
-![Capture d'écran de l'interface de swipe](PhP-project/demo/demo_1.png)
+![Capture d'écran de l'interface de swipe](demo/demo_1.PNG)
 
 ## Fonctionnalités
 
@@ -71,20 +71,20 @@ Par exemple : `localhost:8080/accueil.php`
      - **dislike** pour passer au profil suivant.
    - Vous pouvez également rechercher directement un autre utilisateur par son pseudo.
 
-     ![Texte alternatif](PhP-project/demo/demo_2.png)
+     ![Texte alternatif](demo/demo_2.PNG)
 
 3. **Messagerie** :
    - Échangez des messages avec les utilisateurs avec lesquels vous avez établi une correspondance.
    - Les discussions se font en temps réel (actualisation de la page nécessaire).
    - 
-     ![Texte alternatif](PhP-project/demo/demo_3.png)
+     ![Texte alternatif](demo/demo_3.PNG)
 
 4. **Premium** :
    - Choisissez parmi différents niveaux d'abonnement.
    - Les fonctionnalités premium incluent des filtres de recherche avancés, la possibilité de voir qui a visité votre profil, et des options de messagerie supplémentaires.
    - Les utilisatrices bénéficient d'un accès gratuit aux fonctionnalités de base
   
-     ![Texte alternatif](PhP-project/demo/premium.png)
+     ![Texte alternatif](demo/premium.PNG)
 
 ### Super-utilisateur :  
 
