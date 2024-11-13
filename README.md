@@ -1,6 +1,6 @@
 # Projet Développement Web : Site de Rencontre
 
-![Capture d'écran de la page d'accueil](demo/accueil.PNG)
+![Capture d'écran de la page d'accueil](demo/accueil.png)
 
 Bienvenue sur notre projet de site de rencontre ! Développé par une équipe de quatre étudiants, ce site permet aux utilisateurs de faire connaissance et d'échanger entre eux.
 
@@ -16,7 +16,7 @@ Bienvenue sur notre projet de site de rencontre ! Développé par une équipe de
 
 Notre site de rencontre permet aux utilisateurs de créer leur profil, de rechercher des correspondances, de parcourir les profils grâce au système de swipe et d'échanger des messages. Un abonnement (fictif) est nécessaire pour accéder à toutes les fonctionnalités mises à disposition par le site. Les administrateurs disposent également d'un espace dédié à la modération des profils (identifiants : admin/admin).
 
-![Capture d'écran de l'interface de swipe](demo/demo_1.PNG)
+![Capture d'écran de l'interface de swipe](demo/connexion.png)
 
 ## Fonctionnalités
 
@@ -71,13 +71,13 @@ Par exemple : `localhost:8080/accueil.php`
      - **dislike** pour passer au profil suivant.
    - Vous pouvez également rechercher directement un autre utilisateur par son pseudo.
 
-     ![Texte alternatif](demo/demo_2.PNG)
+     ![Texte alternatif](demo/like.png)
 
 3. **Messagerie** :
    - Échangez des messages avec les utilisateurs avec lesquels vous avez établi une correspondance.
    - Les discussions se font en temps réel (actualisation de la page nécessaire).
    - 
-     ![Texte alternatif](demo/demo_3.PNG)
+     ![Texte alternatif](demo/chat.png)
 
 4. **Premium** :
    - Choisissez parmi différents niveaux d'abonnement.
